@@ -1,4 +1,4 @@
-@prefix : <https://w3id.org/fossr/ontology/limesurvey/> .
+@prefix : <https://anonymous.4open.science/r/survey-builder-8232/ontology/limesurvey.ttl> .
 @prefix ex: <https://w3id.org/fossr/data/test/> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
