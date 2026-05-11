@@ -4,7 +4,7 @@
 # Tested against: abox_test.ttl
 ###############################################################
 
-@prefix : <https://w3id.org/fossr/ontology/limesurvey/> .
+@prefix : <https://anonymous.4open.science/r/survey-builder-8232/ontology/limesurvey.ttl> .
 
 ###############################################################
 # SECTION 1 — Survey Structure
@@ -13,7 +13,7 @@
 # CQ1 — What surveys are associated with a specific study?
 # Returns all Survey instances linked to a given Study via :hasInstrument.
 
-PREFIX : <https://w3id.org/fossr/ontology/limesurvey/>
+PREFIX : <hhttps://anonymous.4open.science/r/survey-builder-8232/ontology/limesurvey.ttl>
 
 SELECT ?study ?survey
 WHERE {
@@ -29,7 +29,7 @@ WHERE {
 # CQ2 — What are the different versions of a particular survey?
 # Returns all SurveyVersion instances linked to each Survey.
 
-PREFIX : <https://w3id.org/fossr/ontology/limesurvey/>
+PREFIX : <https://anonymous.4open.science/r/survey-builder-8232/ontology/limesurvey.ttl>
 
 SELECT ?survey ?version
 WHERE {
@@ -42,7 +42,7 @@ WHERE {
 # CQ3 — Which survey version was a particular version derived from?
 # Traverses the :derivedFrom chain (transitive) to show version history.
 
-PREFIX : <https://w3id.org/fossr/ontology/limesurvey/>
+PREFIX : <https://anonymous.4open.science/r/survey-builder-8232/ontology/limesurvey.ttl>
 
 SELECT ?version ?derivedFrom
 WHERE {
@@ -64,7 +64,7 @@ WHERE {
 # CQ4 — What is the recurrent time period for longitudinal surveys?
 # Returns the :RecurrentTimePeriod associated with each Survey.
 
-PREFIX : <https://w3id.org/fossr/ontology/limesurvey/>
+PREFIX : <https://anonymous.4open.science/r/survey-builder-8232/ontology/limesurvey.ttl>
 
 SELECT ?survey ?period ?label
 WHERE {
@@ -78,7 +78,7 @@ WHERE {
 # CQ5 — What are the start and end dates for each collection period?
 # Returns start and end times of each SurveyVersion's TimeInterval.
 
-PREFIX : <https://w3id.org/fossr/ontology/limesurvey/>
+PREFIX : <https://anonymous.4open.science/r/survey-builder-8232/ontology/limesurvey.ttl>
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
 SELECT ?version ?start ?end
@@ -97,7 +97,7 @@ ORDER BY ?start
 # CQ6 — What components does a survey contain?
 # Returns all QuestionGroups reachable from a Survey through its GroupFlow.
 
-PREFIX : <https://w3id.org/fossr/ontology/limesurvey/>
+PREFIX : <https://anonymous.4open.science/r/survey-builder-8232/ontology/limesurvey.ttl>
 
 SELECT DISTINCT ?survey ?version ?group
 WHERE {
@@ -113,7 +113,7 @@ WHERE {
 # CQ7 — What is the order of components within a survey?
 # Returns each GroupFlowStep with its numeric order value.
 
-PREFIX : <https://w3id.org/fossr/ontology/limesurvey/>
+PREFIX : <https://anonymous.4open.science/r/survey-builder-8232/ontology/limesurvey.ttl>
 
 SELECT ?flow ?step ?group ?orderVal
 WHERE {
@@ -132,7 +132,7 @@ ORDER BY ?flow ?orderVal
 # CQ8 — What are the identifiers associated with each survey component?
 # Returns all components with their Identifier and numeric id value.
 
-PREFIX : <https://w3id.org/fossr/ontology/limesurvey/>
+PREFIX : <https://anonymous.4open.science/r/survey-builder-8232/ontology/limesurvey.ttl>
 
 SELECT ?component ?type ?id ?idVal
 WHERE {
@@ -147,7 +147,7 @@ ORDER BY ?type ?idVal
 # CQ9 — What attributes does a specific component have?
 # Returns all ComponentAttribute instances linked to each component.
 
-PREFIX : <https://w3id.org/fossr/ontology/limesurvey/>
+PREFIX : <https://anonymous.4open.science/r/survey-builder-8232/ontology/limesurvey.ttl>
 
 SELECT ?component ?attr ?name ?value
 WHERE {
@@ -161,7 +161,7 @@ WHERE {
 # CQ10 — What is the name and value of a component attribute?
 # Returns all ComponentAttribute instances with their name/value pair.
 
-PREFIX : <https://w3id.org/fossr/ontology/limesurvey/>
+PREFIX : <https://anonymous.4open.science/r/survey-builder-8232/ontology/limesurvey.ttl>
 
 SELECT ?attr ?name ?value
 WHERE {
@@ -178,7 +178,7 @@ ORDER BY ?name
 # CQ11 — What questions belong to a specific question group?
 # Returns all Question instances linked to each QuestionGroup.
 
-PREFIX : <https://w3id.org/fossr/ontology/limesurvey/>
+PREFIX : <https://anonymous.4open.science/r/survey-builder-8232/ontology/limesurvey.ttl>
 
 SELECT ?group ?groupName ?question ?questionText
 WHERE {
@@ -199,7 +199,7 @@ WHERE {
 # CQ12 — What is the condition (relevance) for displaying a question group or question?
 # Returns the relevance expression associated with each GroupFlowStep or QuestionStep.
 
-PREFIX : <https://w3id.org/fossr/ontology/limesurvey/>
+PREFIX : <https://anonymous.4open.science/r/survey-builder-8232/ontology/limesurvey.ttl>
 
 # For question groups (GroupFlowStep):
 SELECT ?step ?groupOrQuestion ?relevanceExpr
@@ -219,7 +219,7 @@ WHERE {
 # CQ13 — What answer options are available for a given question?
 # Returns all AnswerOption instances with text and order for each Question.
 
-PREFIX : <https://w3id.org/fossr/ontology/limesurvey/>
+PREFIX : <https://anonymous.4open.science/r/survey-builder-8232/ontology/limesurvey.ttl>
 
 SELECT ?question ?answerOption ?code ?text ?order
 WHERE {
@@ -236,7 +236,7 @@ ORDER BY ?question ?order
 # CQ14 — What answer options are available for a given question group?
 # Navigates from QuestionGroup → Question → AnswerOption.
 
-PREFIX : <https://w3id.org/fossr/ontology/limesurvey/>
+PREFIX : <https://anonymous.4open.science/r/survey-builder-8232/ontology/limesurvey.ttl>
 
 SELECT ?group ?question ?answerOption ?text ?order
 WHERE {
@@ -253,7 +253,7 @@ ORDER BY ?group ?question ?order
 # CQ15 — What is the default value for a specific question?
 # Returns the :DefaultValue content linked to each Question.
 
-PREFIX : <https://w3id.org/fossr/ontology/limesurvey/>
+PREFIX : <https://anonymous.4open.science/r/survey-builder-8232/ontology/limesurvey.ttl>
 
 SELECT ?question ?defaultContent
 WHERE {
@@ -267,7 +267,7 @@ WHERE {
 # CQ16 — What type does a question have?
 # Returns the QuestionType code associated with each Question.
 
-PREFIX : <https://w3id.org/fossr/ontology/limesurvey/>
+PREFIX : <https://anonymous.4open.science/r/survey-builder-8232/ontology/limesurvey.ttl>
 
 SELECT ?question ?questionType ?typeCode
 WHERE {
@@ -281,7 +281,7 @@ WHERE {
 # CQ17 — What variable is associated with a question?
 # Returns the Variable and its code for each Question.
 
-PREFIX : <https://w3id.org/fossr/ontology/limesurvey/>
+PREFIX : <https://anonymous.4open.science/r/survey-builder-8232/ontology/limesurvey.ttl>
 
 SELECT ?question ?variable ?variableCode
 WHERE {
@@ -295,7 +295,7 @@ WHERE {
 # CQ18 — Does a question have subquestions, and if so, what are they?
 # Returns all Subquestion instances linked to each Question.
 
-PREFIX : <https://w3id.org/fossr/ontology/limesurvey/>
+PREFIX : <https://anonymous.4open.science/r/survey-builder-8232/ontology/limesurvey.ttl>
 
 SELECT ?question ?subquestion
 WHERE {
@@ -308,7 +308,7 @@ WHERE {
 # CQ19 — What is the order of answer options for a question or question group?
 # Returns answer options ordered by :answerOrder.
 
-PREFIX : <https://w3id.org/fossr/ontology/limesurvey/>
+PREFIX : <https://anonymous.4open.science/r/survey-builder-8232/ontology/limesurvey.ttl>
 
 SELECT ?question ?answerOption ?code ?text ?orderVal
 WHERE {
@@ -327,7 +327,7 @@ ORDER BY ?question ?orderVal
 # CQ20 — What variable name is associated with each question?
 # Returns the variable code (:variableCod) for each Question.
 
-PREFIX : <https://w3id.org/fossr/ontology/limesurvey/>
+PREFIX : <https://anonymous.4open.science/r/survey-builder-8232/ontology/limesurvey.ttl>
 
 SELECT ?question ?questionText ?variableCode
 WHERE {
@@ -346,7 +346,7 @@ WHERE {
 # Navigates the full chain Survey → SurveyVersion → GroupFlow →
 # GroupFlowStep → QuestionGroup → Question → Variable.
 
-PREFIX : <https://w3id.org/fossr/ontology/limesurvey/>
+PREFIX : <https://anonymous.4open.science/r/survey-builder-8232/ontology/limesurvey.ttl>
 
 SELECT DISTINCT ?survey ?variableCode
 WHERE {
