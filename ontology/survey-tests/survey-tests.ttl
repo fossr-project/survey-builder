@@ -1,217 +1,448 @@
-@prefix :      <https://w3id.org/fossr/ontology/bdi-tests/> .
-@prefix terms: <http://purl.org/dc/terms/> .
-@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
-@prefix owl:   <http://www.w3.org/2002/07/owl#> .
-@prefix bdi:   <https://w3id.org/fossr/ontology/bdi/> .
-@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
-@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
-@prefix vann:  <http://purl.org/vocab/vann/> .
-@prefix vs:    <http://www.w3.org/2003/06/sw-vocab-status/ns#> .
-@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+@prefix : <https://w3id.org/fossr/ontology/limesurvey/> .
+@prefix ex: <https://w3id.org/fossr/data/test/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 
-:Task_RegisterExam  a  bdi:Task ;
-        rdfs:label       "Register for examination" ;
-        bdi:hasValidity  :TI_RegisterWindow ;
-        bdi:precedes     :Task_SitExam .
+# ================================================================
+# STUDY
+# ================================================================
 
-:TI_Start_ExamResult
-        a         bdi:TimeInstant ;
-        bdi:time  "2025-01-15T10:00:00"^^xsd:dateTime .
+ex:Study_SODA a :Study ;
+    :hasInstrument ex:Survey_SODA .
 
-:Belief_LovesPC  a   bdi:Belief ;
-        rdfs:label     "I enjoy spending long hours at a computer" ;
-        bdi:atTime     :TI_AY2024 ;
-        bdi:motivates  :Desire_Graduate .
+ex:Study_ESS a :Study ;
+    :hasInstrument ex:Survey_ESS .
 
-:Intention_ResitAlgorithms
-        a            bdi:Intention ;
-        rdfs:label   "Register for the Algorithms resit" ;
-        bdi:atTime   :TI_ExamResult ;
-        bdi:fulfils  :Desire_Graduate .
+# ================================================================
+# SURVEYS
+# ================================================================
 
-:TI_End_AY2024  a  bdi:TimeInstant ;
-        bdi:time  "2025-07-31T00:00:00"^^xsd:dateTime .
+ex:Survey_SODA a :Survey ;
+    :hasSurveyId ex:Identifier_Survey_SODA ;
+    :hasSurveyVersion ex:SurveyVersion_SODA_2023 ,
+                      ex:SurveyVersion_SODA_2024 ;
+    :hasRecurrentTimePeriod ex:RecurrentTimePeriod_Annual .
 
-:Justification_Graduate
-        a              bdi:Justification ;
-        rdfs:label     "Mark's academic background justifies the desire to graduate" ;
-        bdi:justifies  :Desire_Graduate .
+ex:Survey_ESS a :Survey ;
+    :hasSurveyId ex:Identifier_Survey_ESS ;
+    :hasSurveyVersion ex:SurveyVersion_ESS_Wave10 ;
+    :hasRecurrentTimePeriod ex:RecurrentTimePeriod_Biennial .
 
-:WS_ExamSchedule  a  bdi:WorldState ;
-        rdfs:label  "Examination schedule" .
+# ================================================================
+# IDENTIFIERS
+# ================================================================
 
-terms:license  a  owl:AnnotationProperty .
+ex:Identifier_Survey_SODA a :Identifier ;
+    :id "1"^^xsd:int .
 
-:TI_AY2024  a           bdi:TimeInterval ;
-        rdfs:label        "Academic year 2024/2025" ;
-        bdi:hasEndTime    :TI_End_AY2024 ;
-        bdi:hasStartTime  :TI_Start_AY2024 .
+ex:Identifier_Survey_ESS a :Identifier ;
+    :id "2"^^xsd:int .
 
-:Intention_Graduation
-        a            bdi:Intention ;
-        rdfs:label   "Attend the graduation ceremony" ;
-        bdi:atTime   :TI_AY2024 ;
-        bdi:fulfils  :Desire_Graduate .
+ex:Identifier_QG1 a :Identifier ;
+    :id "1"^^xsd:int .
 
-:Plan_AlgorithmsCourse
-        a              bdi:Plan ;
-        rdfs:label     "Plan for Algorithms examination" ;
-        bdi:addresses  :Goal_GraduateCS .
+ex:Identifier_QG2 a :Identifier ;
+    :id "2"^^xsd:int .
 
-:Desire_Graduate  a      bdi:Desire ;
-        rdfs:label         "Obtain a Computer Science degree" ;
-        bdi:atTime         :TI_AY2024 ;
-        bdi:hasPart        :Intention_PassExams , :Intention_WriteThesis , :Belief_GoodAtScience , :Belief_Employment , :Intention_Graduation ;
-        bdi:isMotivatedBy  :Belief_LogicalSkills , :Belief_LovesPC , :Belief_GoodAtScience , :Belief_Employment .
+ex:Identifier_Q1 a :Identifier ;
+    :id "10"^^xsd:int .
 
-vann:preferredNamespaceUri
-        a       owl:AnnotationProperty .
+ex:Identifier_Q2 a :Identifier ;
+    :id "11"^^xsd:int .
 
-:Belief_GoodAtScience
-        a              bdi:Belief ;
-        rdfs:label     "I am good at science" ;
-        bdi:atTime     :TI_AY2024 ;
-        bdi:motivates  :Desire_Graduate .
+ex:Identifier_Q3 a :Identifier ;
+    :id "12"^^xsd:int .
 
-:TI_Start_AY2024  a  bdi:TimeInstant ;
-        bdi:time  "2024-09-01T00:00:00"^^xsd:dateTime .
+ex:Identifier_AO1 a :Identifier ;
+    :id "101"^^xsd:int .
 
-:Task_Graduation  a  bdi:Task ;
-        rdfs:label  "Attend graduation ceremony" .
+ex:Identifier_AO2 a :Identifier ;
+    :id "102"^^xsd:int .
 
-:Task_SitExam  a    bdi:Task ;
-        rdfs:label    "Sit the examination" ;
-        bdi:precedes  :Task_PayFees .
+# ================================================================
+# SURVEY VERSIONS
+# ================================================================
 
-:Belief_LogicalSkills
-        a              bdi:Belief ;
-        rdfs:label     "I have strong logical reasoning abilities" ;
-        bdi:atTime     :TI_AY2024 ;
-        bdi:motivates  :Desire_Graduate .
+ex:SurveyVersion_SODA_2023 a :SurveyVersion ;
+    :hasSurveyId ex:Identifier_SV_SODA_2023 ;
+    :hasGroupFlow ex:GroupFlow_SODA_2023 ;
+    :hasIntervalValidity ex:TimeInterval_SODA_2023 .
 
-terms:creator  a  owl:AnnotationProperty .
+ex:SurveyVersion_SODA_2024 a :SurveyVersion ;
+    :hasSurveyId ex:Identifier_SV_SODA_2024 ;
+    :derivedFrom ex:SurveyVersion_SODA_2023 ;
+    :hasGroupFlow ex:GroupFlow_SODA_2024 ;
+    :hasIntervalValidity ex:TimeInterval_SODA_2024 .
 
-<http://purl.org/vocommons/voaf#Vocabulary>
-        a       owl:Class .
+ex:SurveyVersion_ESS_Wave10 a :SurveyVersion ;
+    :hasSurveyId ex:Identifier_SV_ESS_Wave10 ;
+    :hasGroupFlow ex:GroupFlow_ESS_Wave10 ;
+    :hasIntervalValidity ex:TimeInterval_ESS_Wave10 .
 
-terms:title  a  owl:AnnotationProperty .
+ex:Identifier_SV_SODA_2023 a :Identifier ;
+    :id "100"^^xsd:int .
 
-:Belief_Employment  a  bdi:Belief ;
-        rdfs:label     "CS graduates find employment easily" ;
-        bdi:atTime     :TI_AY2024 ;
-        bdi:motivates  :Desire_Graduate ;
-        bdi:refersTo   :WS_AcademicCalendar .
+ex:Identifier_SV_SODA_2024 a :Identifier ;
+    :id "101"^^xsd:int .
 
-dc:description  a  owl:AnnotationProperty .
+ex:Identifier_SV_ESS_Wave10 a :Identifier ;
+    :id "200"^^xsd:int .
 
-:Goal_GraduateCS  a  bdi:Goal ;
-        rdfs:label  "Graduate in Computer Science" .
+# ================================================================
+# TIME INTERVALS
+# ================================================================
 
-:Planning_Graduate  a    bdi:Planning ;
-        rdfs:label         "Planning process for graduation" ;
-        bdi:atTime         :TI_AY2024 ;
-        bdi:defines        :Plan_Graduate ;
-        bdi:isProcessedBy  :Mark ;
-        bdi:reasonsUpon    :Intention_PassExams .
+ex:TimeInterval_SODA_2023 a :TimeInterval ;
+    :startTime "2023-01-01T00:00:00"^^xsd:dateTime ;
+    :endTime   "2023-12-31T23:59:59"^^xsd:dateTime .
 
-terms:publisher  a  owl:AnnotationProperty .
+ex:TimeInterval_SODA_2024 a :TimeInterval ;
+    :startTime "2024-01-01T00:00:00"^^xsd:dateTime ;
+    :endTime   "2024-12-31T23:59:59"^^xsd:dateTime .
 
-:Task_PayFees  a    bdi:Task ;
-        rdfs:label    "Pay tuition fees" ;
-        bdi:precedes  :Task_Graduation .
+ex:TimeInterval_ESS_Wave10 a :TimeInterval ;
+    :startTime "2020-09-01T00:00:00"^^xsd:dateTime ;
+    :endTime   "2022-06-30T23:59:59"^^xsd:dateTime .
 
-:Intention_PassExams
-        a                  bdi:Intention ;
-        rdfs:label         "Pass all required examinations" ;
-        bdi:atTime         :TI_AY2024 ;
-        bdi:fulfils        :Desire_Graduate ;
-        bdi:isSupportedBy  :Belief_GoodAtScience ;
-        bdi:specifies      :Plan_Graduate .
+# ================================================================
+# RECURRENT TIME PERIOD
+# ================================================================
 
-vs:term_status  a  owl:AnnotationProperty .
+ex:RecurrentTimePeriod_Annual a :RecurrentTimePeriod ;
+    rdfs:label "Annual" .
 
-:IP_ResitIntention  a    bdi:IntentionProcess ;
-        rdfs:label         "Intention refinement for resit" ;
-        bdi:atTime         :TI_ExamResult ;
-        bdi:generates      :Intention_ResitAlgorithms ;
-        bdi:isTriggeredBy  :Belief_ExamFailed .
+ex:RecurrentTimePeriod_Biennial a :RecurrentTimePeriod ;
+    rdfs:label "Biennial" .
 
-:TI_End_Register  a  bdi:TimeInstant ;
-        bdi:time  "2024-12-20T00:00:00"^^xsd:dateTime .
+# ================================================================
+# GROUP FLOWS
+# ================================================================
 
-:Intention_WriteThesis
-        a            bdi:Intention ;
-        rdfs:label   "Write the thesis" ;
-        bdi:atTime   :TI_AY2024 ;
-        bdi:fulfils  :Desire_Graduate .
+ex:GroupFlow_SODA_2023 a :GroupFlow ;
+    :hasComponentFlowFirstStep ex:GroupFlowStep_GFS1 ;
+    :hasComponentFlowLastStep  ex:GroupFlowStep_GFS2 ;
+    :hasComponentFlowStep ex:GroupFlowStep_GFS1 ,
+                          ex:GroupFlowStep_GFS2 .
 
-:Mark  a                  bdi:Agent ;
-        bdi:cognises        :Belief_Employment , :Intention_Graduation , :Intention_WriteThesis , :Intention_ResitAlgorithms , :Belief_LogicalSkills , :Belief_ExamFailed , :Intention_PassExams , :Belief_GoodAtScience , :Belief_LovesPC , :Desire_Graduate ;
-        bdi:hasMentalState  :Intention_WriteThesis , :Intention_PassExams , :Belief_Employment , :Belief_LogicalSkills , :Belief_LovesPC , :Belief_GoodAtScience , :Intention_ResitAlgorithms , :Intention_Graduation , :Belief_ExamFailed , :Desire_Graduate ;
-        bdi:perceives       :WS_AcademicCalendar , :WS_ExamSchedule .
+ex:GroupFlow_SODA_2024 a :GroupFlow ;
+    :hasComponentFlowFirstStep ex:GroupFlowStep_GFS3 ;
+    :hasComponentFlowLastStep  ex:GroupFlowStep_GFS3 ;
+    :hasComponentFlowStep ex:GroupFlowStep_GFS3 .
 
-:BP_FailureRevision
-        a                  bdi:BeliefProcess ;
-        rdfs:label         "Belief revision upon exam failure" ;
-        bdi:atTime         :TI_ExamResult ;
-        bdi:generates      :Belief_ExamFailed ;
-        bdi:isProcessedBy  :Mark ;
-        bdi:isTriggeredBy  :Belief_ExamFailed ;
-        bdi:reasonsUpon    :Belief_ExamFailed .
+ex:GroupFlow_ESS_Wave10 a :GroupFlow ;
+    :hasComponentFlowFirstStep ex:GroupFlowStep_GFS4 ;
+    :hasComponentFlowLastStep  ex:GroupFlowStep_GFS4 ;
+    :hasComponentFlowStep ex:GroupFlowStep_GFS4 .
 
-:TI_Start_Register  a  bdi:TimeInstant ;
-        bdi:time  "2024-12-01T00:00:00"^^xsd:dateTime .
+# ================================================================
+# GROUP FLOW STEPS
+# ================================================================
 
-rdf:type  a     owl:AnnotationProperty .
+ex:GroupFlowStep_GFS1 a :GroupFlowStep ;
+    :hasQuestionGroup ex:QuestionGroup_Demographics ;
+    :hasComponentFlowNextStep ex:GroupFlowStep_GFS2 ;
+    :hasOrder ex:Order_1 ;
+    :hasCondition ex:Relevance_Always ;
+    :randomize "0"^^xsd:int .
 
-:Plan_ResitAlgorithms
-        a              bdi:Plan ;
-        rdfs:label     "Revised plan including Algorithms resit" ;
-        bdi:addresses  :Goal_GraduateCS .
+ex:GroupFlowStep_GFS2 a :GroupFlowStep ;
+    :hasQuestionGroup ex:QuestionGroup_Archiving ;
+    :hasComponentFlowPreviusStep ex:GroupFlowStep_GFS1 ;
+    :hasOrder ex:Order_2 ;
+    :hasCondition ex:Relevance_IfArchives ;
+    :randomize "0"^^xsd:int .
 
-terms:rights  a  owl:AnnotationProperty .
+ex:GroupFlowStep_GFS3 a :GroupFlowStep ;
+    :hasQuestionGroup ex:QuestionGroup_Demographics ;
+    :hasOrder ex:Order_1 ;
+    :randomize "0"^^xsd:int .
 
-:DP_ResitDesire  a       bdi:DesireProcess ;
-        rdfs:label         "Desire update to resit the exam" ;
-        bdi:atTime         :TI_ExamResult ;
-        bdi:isProcessedBy  :Mark ;
-        bdi:isTriggeredBy  :Belief_ExamFailed ;
-        bdi:modifies       :Desire_Graduate ;
-        bdi:reasonsUpon    :Desire_Graduate .
+ex:GroupFlowStep_GFS4 a :GroupFlowStep ;
+    :hasQuestionGroup ex:QuestionGroup_Social ;
+    :hasOrder ex:Order_1 ;
+    :randomize "0"^^xsd:int .
 
-terms:modified  a  owl:AnnotationProperty .
+# ================================================================
+# ORDER
+# ================================================================
 
-:Plan_Graduate  a       bdi:Plan ;
-        rdfs:label        "Graduation plan" ;
-        bdi:addresses     :Goal_GraduateCS ;
-        bdi:beginsWith    :Task_Enrol ;
-        bdi:endsWith      :Task_Graduation ;
-        bdi:hasComponent  :Task_SitExam , :Task_RegisterExam , :Task_Graduation , :Task_PayFees , :Task_Enrol ;
-        bdi:hasPart       :Plan_AlgorithmsCourse .
+ex:Order_1 a :Order ;
+    :order "1"^^xsd:int .
 
-vann:preferredNamespacePrefix
-        a       owl:AnnotationProperty .
+ex:Order_2 a :Order ;
+    :order "2"^^xsd:int .
 
-:Task_Enrol  a      bdi:Task ;
-        rdfs:label    "Enrol in the programme" ;
-        bdi:precedes  :Task_RegisterExam .
+ex:Order_3 a :Order ;
+    :order "3"^^xsd:int .
 
-:TI_RegisterWindow  a   bdi:TimeInterval ;
-        rdfs:label        "Examination registration window" ;
-        bdi:hasEndTime    :TI_End_Register ;
-        bdi:hasStartTime  :TI_Start_Register .
+# ================================================================
+# QUESTION GROUPS
+# ================================================================
 
-terms:issued  a  owl:AnnotationProperty .
+ex:QuestionGroup_Demographics a :QuestionGroup ;
+    :hasId ex:Identifier_QG1 ;
+    :hasName ex:Name_QG_Demographics ;
+    :hasContent ex:Content_QG_Demographics ;
+    :hasQuestion ex:Question_Title , ex:Question_Institution ;
+    :hasQuestionFlow ex:QuestionFlow_Demographics ;
+    :hasComponentAttribute ex:Attr_QG_Demographics_mandatory .
 
-:Belief_ExamFailed  a  bdi:Belief ;
-        rdfs:label    "I failed the Algorithms examination" ;
-        bdi:atTime    :TI_ExamResult ;
-        bdi:refersTo  :WS_ExamSchedule .
+ex:QuestionGroup_Archiving a :QuestionGroup ;
+    :hasId ex:Identifier_QG2 ;
+    :hasName ex:Name_QG_Archiving ;
+    :hasContent ex:Content_QG_Archiving ;
+    :hasQuestion ex:Question_Archive ;
+    :hasQuestionFlow ex:QuestionFlow_Archiving ;
+    :hasComponentAttribute ex:Attr_QG_Archiving_relevance .
 
-:WS_AcademicCalendar
-        a           bdi:WorldState ;
-        rdfs:label  "Academic calendar 2024/2025" .
+ex:QuestionGroup_Social a :QuestionGroup ;
+    :hasId ex:Identifier_QG3 ;
+    :hasName ex:Name_QG_Social ;
+    :hasContent ex:Content_QG_Social ;
+    :hasQuestion ex:Question_Age .
 
-:TI_ExamResult  a       bdi:TimeInterval ;
-        rdfs:label        "Moment of exam result notification" ;
-        bdi:hasStartTime  :TI_Start_ExamResult .
+ex:Identifier_QG3 a :Identifier ;
+    :id "3"^^xsd:int .
+
+# ================================================================
+# NAMES
+# ================================================================
+
+ex:Name_QG_Demographics a :Name ;
+    :nameText "General Information" .
+
+ex:Name_QG_Archiving a :Name ;
+    :nameText "Archiving Research Data" .
+
+ex:Name_QG_Social a :Name ;
+    :nameText "Social Background" .
+
+# ================================================================
+# CONTENTS
+# ================================================================
+
+ex:Content_QG_Demographics a :Content ;
+    :text "This section collects general information about the respondent." .
+
+ex:Content_QG_Archiving a :Content ;
+    :text "This section covers practices regarding archiving research data." .
+
+ex:Content_QG_Social a :Content ;
+    :text "This section collects social background information." .
+
+ex:Content_Q_Title a :Content ;
+    :text "Your title (researcher, professor, doctoral student, post-doc...):" .
+
+ex:Content_Q_Institution a :Content ;
+    :text "Your institution and your research group / project / institute:" .
+
+ex:Content_Q_Archive a :Content ;
+    :text "Do you archive your research data?" .
+
+ex:Content_Q_Age a :Content ;
+    :text "What is your age?" .
+
+# ================================================================
+# QUESTION FLOWS
+# ================================================================
+
+ex:QuestionFlow_Demographics a :QuestionFlow ;
+    :hasFirstQuestionStep ex:QuestionStep_QS1 ;
+    :hasLastQuestionStep  ex:QuestionStep_QS2 ;
+    :hasQuestionStep ex:QuestionStep_QS1 ,
+                     ex:QuestionStep_QS2 .
+
+ex:QuestionFlow_Archiving a :QuestionFlow ;
+    :hasFirstQuestionStep ex:QuestionStep_QS3 ;
+    :hasLastQuestionStep  ex:QuestionStep_QS3 ;
+    :hasQuestionStep ex:QuestionStep_QS3 .
+
+# ================================================================
+# QUESTION STEPS
+# ================================================================
+
+ex:QuestionStep_QS1 a :QuestionStep ;
+    :hasOrder ex:Order_1 ;
+    :hasCondition ex:Relevance_Always ;
+    :hasNextQuestionStep ex:QuestionStep_QS2 .
+
+ex:QuestionStep_QS2 a :QuestionStep ;
+    :hasOrder ex:Order_2 ;
+    :hasCondition ex:Relevance_Always ;
+    :hasPreviusQuestionStep ex:QuestionStep_QS1 .
+
+ex:QuestionStep_QS3 a :QuestionStep ;
+    :hasOrder ex:Order_1 .
+
+# ================================================================
+# RELEVANCE (conditions)
+# ================================================================
+
+ex:Relevance_Always a :Relevance ;
+    :relevance "1" .
+
+ex:Relevance_IfArchives a :Relevance ;
+    :relevance "ARCHIVE == 'Y'" .
+
+# ================================================================
+# QUESTIONS
+# ================================================================
+
+ex:Question_Title a :Question ;
+    :hasId ex:Identifier_Q1 ;
+    :hasContent ex:Content_Q_Title ;
+    :hasGroup ex:QuestionGroup_Demographics ;
+    :hasType ex:QuestionType_S ;
+    :hasVariable ex:Variable_TITLE ;
+    :isMandatory "0"^^xsd:integer ;
+    :isEncrypted "0"^^xsd:integer ;
+    :hasComponentAttribute ex:Attr_Q_Title_order .
+
+ex:Question_Institution a :Question ;
+    :hasId ex:Identifier_Q2 ;
+    :hasContent ex:Content_Q_Institution ;
+    :hasGroup ex:QuestionGroup_Demographics ;
+    :hasType ex:QuestionType_S ;
+    :hasVariable ex:Variable_INSTITUTION ;
+    :isMandatory "0"^^xsd:integer ;
+    :isEncrypted "0"^^xsd:integer ;
+    :hasComponentAttribute ex:Attr_Q_Institution_order ;
+    :hasDefaultValue ex:DefaultValue_Institution .
+
+ex:Question_Archive a :Question ;
+    :hasId ex:Identifier_Q3 ;
+    :hasContent ex:Content_Q_Archive ;
+    :hasGroup ex:QuestionGroup_Archiving ;
+    :hasType ex:QuestionType_L ;
+    :hasVariable ex:Variable_ARCHIVE ;
+    :isMandatory "1"^^xsd:integer ;
+    :isEncrypted "0"^^xsd:integer ;
+    :hasAnswerOption ex:AnswerOption_Always ,
+                     ex:AnswerOption_Sometimes ,
+                     ex:AnswerOption_Never ;
+    :hasComponentAttribute ex:Attr_Q_Archive_order ;
+    :hasSubquestion ex:Subquestion_Archive_Who .
+
+ex:Question_Age a :Question ;
+    :hasId ex:Identifier_Q4 ;
+    :hasContent ex:Content_Q_Age ;
+    :hasGroup ex:QuestionGroup_Social ;
+    :hasType ex:QuestionType_N ;
+    :hasVariable ex:Variable_AGE ;
+    :isMandatory "1"^^xsd:integer ;
+    :isEncrypted "0"^^xsd:integer ;
+    :hasAttribute ex:QuestionAttribute_Age .
+
+ex:Identifier_Q4 a :Identifier ;
+    :id "13"^^xsd:int .
+
+# ================================================================
+# QUESTION TYPES
+# ================================================================
+
+ex:QuestionType_S a :QuestionType ;
+    :componentValue "S" .
+
+ex:QuestionType_L a :QuestionType ;
+    :componentValue "L" .
+
+ex:QuestionType_N a :QuestionType ;
+    :componentValue "N" .
+
+# ================================================================
+# VARIABLES
+# ================================================================
+
+ex:Variable_TITLE a :Variable ;
+    :variableCod "TITLE" .
+
+ex:Variable_INSTITUTION a :Variable ;
+    :variableCod "INSTITUTION" .
+
+ex:Variable_ARCHIVE a :Variable ;
+    :variableCod "ARCHIVE" .
+
+ex:Variable_AGE a :Variable ;
+    :variableCod "AGE" .
+
+# ================================================================
+# DEFAULT VALUES
+# ================================================================
+
+ex:DefaultValue_Institution a :DefaultValue ;
+    :defaultValueContent "University of Padova" .
+
+# ================================================================
+# ANSWER OPTIONS
+# ================================================================
+
+ex:AnswerOption_Always a :AnswerOption ;
+    :hasId ex:Identifier_AO1 ;
+    :componentValue "A1" ;
+    :answerText "Always" ;
+    :answerOrder "1"^^xsd:integer ;
+    :answerScaleId "0"^^xsd:integer ;
+    :assessmentValue "1"^^xsd:integer .
+
+ex:AnswerOption_Sometimes a :AnswerOption ;
+    :hasId ex:Identifier_AO2 ;
+    :componentValue "A2" ;
+    :answerText "Sometimes" ;
+    :answerOrder "2"^^xsd:integer ;
+    :answerScaleId "0"^^xsd:integer ;
+    :assessmentValue "0"^^xsd:integer .
+
+ex:AnswerOption_Never a :AnswerOption ;
+    :hasId ex:Identifier_AO3 ;
+    :componentValue "A3" ;
+    :answerText "Never" ;
+    :answerOrder "3"^^xsd:integer ;
+    :answerScaleId "0"^^xsd:integer ;
+    :assessmentValue "-1"^^xsd:integer .
+
+ex:Identifier_AO3 a :Identifier ;
+    :id "103"^^xsd:int .
+
+# ================================================================
+# SUBQUESTIONS
+# ================================================================
+
+ex:Subquestion_Archive_Who a :Subquestion ;
+    :hasSubAttribute ex:Attr_Subq_Who_label .
+
+ex:Attr_Subq_Who_label a :ComponentAttribute ;
+    :componentName "other_replace_word" ;
+    :componentValue "Who?" .
+
+# ================================================================
+# COMPONENT ATTRIBUTES
+# ================================================================
+
+ex:Attr_QG_Demographics_mandatory a :ComponentAttribute ;
+    :componentName "mandatory" ;
+    :componentValue "N" .
+
+ex:Attr_QG_Archiving_relevance a :ComponentAttribute ;
+    :componentName "relevance" ;
+    :componentValue "1" .
+
+ex:Attr_Q_Title_order a :ComponentAttribute ;
+    :componentName "question_order" ;
+    :componentValue "1" .
+
+ex:Attr_Q_Institution_order a :ComponentAttribute ;
+    :componentName "question_order" ;
+    :componentValue "2" .
+
+ex:Attr_Q_Archive_order a :ComponentAttribute ;
+    :componentName "question_order" ;
+    :componentValue "3" .
+
+# ================================================================
+# QUESTION ATTRIBUTES
+# ================================================================
+
+ex:QuestionAttribute_Age a :QuestionAttribute ;
+    :attributeTimeLimit "60"^^xsd:integer ;
+    :attributeTimeLimitAction "1"^^xsd:integer ;
+    :attributeRandomGroup "groupA" .
