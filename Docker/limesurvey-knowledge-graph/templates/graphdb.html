@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GraphDB Manager</title>
+    <link rel="stylesheet" href="../static/css/style.css">
+
+</head>
+<body>
+    <div class="container">
+        <!-- Institutional Banner -->
+        <div class="institutional-banner">
+            <img src="../static/images/institutional-banner.png" alt="Finanziato dall'Unione Europea - Ministero dell'Università e della Ricerca - Italia Domani">
+        </div>
+        <div class="header-logo">
+                    <img src="../static/images/project-logo.png" alt="Project Logo">
+    </div>
+        <div class="header">
+            <div class="header-left">
+
+                    <div>
+                        <h1>🗄️ GraphDB Manager</h1>
+                        <p>Manage repositories, ontologies, and survey data</p>
+                    </div>
+            
+            </div>
+            <div class="nav-links">
+                <a href="/" class="nav-link">🏠 Home</a>
+                <a href="/limesurvey" class="nav-link">📊 LimeSurvey</a>
+                <a href="/graphdb" class="nav-link active">🗄️ GraphDB</a>
+                <a href="/surveybuilder" class="nav-link">🔨 Survey Builder</a>
+            </div>
+        </div>
+
+        <!-- Global GraphDB Configuration -->
+        <div class="repo-selector">
+            <div class="repo-selector-header">
+                <h4>🔗 GraphDB Connection</h4>
+            </div>
+            <div class="form-group" style="margin-bottom: 0;">
+                <input type="text" id="graphdb_url" value="http://localhost:7200" placeholder="http://localhost:7200">
+            </div>
+        </div>
+
+        <!-- Tabs -->
+        <div class="tabs">
+            <button class="tab active" onclick="switchTab('repositories')">🗄️ Repositories</button>
+            <button class="tab" onclick="switchTab('ontology')">📚 Ontology</button>
+            <button class="tab" onclick="switchTab('data')">📊 Survey Data</button>
+        </div>
+
+        <!-- TAB 1: REPOSITORY MANAGEMENT -->
+        <div id="repositories" class="tab-content active">
+            <h2 style="margin-bottom: 20px;">Repository Management</h2>
+
+            <!-- Existing Repositories -->
+            <div class="card">
+                <div class="card-header">
+                    <div class="card-title">
+                        <span>📋</span>
+                        <span>Available Repositories</span>
+                    </div>
+                    <button class="btn btn-small btn-secondary" onclick="refreshRepositories()">
+                        🔄 Refresh
+                    </button>
+                </div>
+                <div class="card-body">
+                    <div class="form-group">
+                        <label>Select Repository</label>
+                        <select id="repo_select_list" onchange="selectRepositoryFromList()">
+                            <option value="">-- Select Repository --</option>
+                        </select>
+                    </div>
+                    <div id="repo_details" style="display: none; margin-top: 15px; padding: 15px; background: #f5f5f5; border-radius: 8px;">
+                        <h4 style="margin-bottom: 10px;">Repository Details</h4>
+                        <div id="repo_details_content"></div>
+                    </div>
+                </div>
+                <div class="card-footer">
+                    <button class="btn btn-secondary" onclick="listAllRepositories()">
+                        📋 Show All Details
+                    </button>
+                </div>
+            </div>
+
+            <!-- Create New Repository -->
+            <div class="card" style="margin-top: 20px;">
+                <div class="card-header">
+                    <div class="card-title">
+                        <span>➕</span>
+                        <span>Create New Repository</span>
+                    </div>
+                </div>
+                <div class="card-body">
+                    <div class="form-group">
+                        <label>Repository ID *</label>
+                        <input type="text" id="new_repo_id" placeholder="my_repository">
+                        <small>Lowercase, no spaces (e.g., survey_data_2024)</small>
+                    </div>
+                    <div class="form-group">
+                        <label>Title (optional)</label>
+                        <input type="text" id="new_repo_title" placeholder="My Repository">
+                    </div>
+                    <div class="form-group">
+                        <label>Ruleset</label>
+                        <select id="new_repo_ruleset">
+                            <option value="empty">Empty (no inference)</option>
+                            <option value="rdfs">RDFS</option>
+                            <option value="owl-horst-optimized">OWL Horst Optimized</option>
+                            <option value="owl2-rl">OWL 2 RL</option>
+                        </select>
+                        <small>Choose inference rules for the repository</small>
+                    </div>
+                </div>
+                <div class="card-footer">
+                    <button class="btn btn-success" onclick="createNewRepository()">
+                        ➕ Create Repository
+                    </button>
+                </div>
+            </div>
+
+            <!-- Dangerous Operations -->
+            <div class="card" style="margin-top: 20px; border-color: #ef5350;">
+                <div class="card-header" style="background: #ffebee;">
+                    <div class="card-title" style="color: #c62828;">
+                        <span>⚠️</span>
+                        <span>Dangerous Operations</span>
+                    </div>
+                </div>
+                <div class="card-body">
+                    <div class="warning" style="margin-bottom: 15px;">
+                        <strong>⚠️ Warning:</strong> These operations cannot be undone. Make sure you have selected the correct repository.
+                    </div>
+                    <div class="form-group">
+                        <label>Repository ID to Delete/Clear</label>
+                        <input type="text" id="danger_repo_id" placeholder="Select from list above">
+                    </div>
+                </div>
+                <div class="card-footer">
+                    <button class="btn btn-warning" onclick="clearRepositoryData()">
+                        🧹 Clear All Data
+                    </button>
+                    <button class="btn btn-danger" onclick="deleteRepository()">
+                        💣 Delete Repository
+                    </button>
+                </div>
+            </div>
+
+            <div id="repo_results" style="margin-top: 20px;"></div>
+        </div>
+
+        <!-- TAB 2: ONTOLOGY UPLOAD -->
+        <div id="ontology" class="tab-content">
+            <h2 style="margin-bottom: 20px;">Ontology Management</h2>
+
+            <!-- Repository Selection -->
+            <div class="card">
+                <div class="card-header">
+                    <div class="card-title">
+                        <span>📦</span>
+                        <span>Select Target Repository</span>
+                    </div>
+                </div>
+                <div class="card-body">
+                    <div class="form-group">
+                        <label>Repository</label>
+                        <div class="input-with-button">
+                            <select id="onto_repo_select" onchange="loadOntologiesForRepo()">
+                                <option value="">-- Select Repository --</option>
+                            </select>
+                            <button class="btn btn-small btn-secondary" onclick="refreshOntologyRepos()">
+                                🔄
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- View Loaded Ontologies -->
+            <div class="card" style="margin-top: 20px;">
+                <div class="card-header">
+                    <div class="card-title">
+                        <span>📖</span>
+                        <span>Loaded Named Graphs</span>
+                    </div>
+                    <button class="btn btn-small btn-secondary" onclick="loadOntologiesForRepo()">
+                        🔄 Refresh
+                    </button>
+                </div>
+                <div class="card-body">
+                    <div id="ontologies_list" style="color: #999;">
+                        Select a repository to view loaded named graphs
+                    </div>
+                </div>
+            </div>
+
+            <!-- Upload OWL File -->
+            <div class="card" style="margin-top: 20px;">
+                <div class="card-header">
+                    <div class="card-title">
+                        <span>📤</span>
+                        <span>Upload OWL Ontology</span>
+                    </div>
+                </div>
+                <div class="card-body">
+                    <div class="form-group">
+                        <label>OWL File (.owl, .rdf, .ttl)</label>
+                        <div class="input-with-button">
+                            <input type="text" id="owl_file_path" placeholder="Select ontology file..." readonly>
+                            <input type="file" id="owl_file_input" accept=".owl,.rdf,.ttl" style="display: none;" onchange="handleOWLFileSelect(event)">
+                            <button class="btn btn-small btn-secondary" onclick="document.getElementById('owl_file_input').click()">
+                                📁 Browse
+                            </button>
+                        </div>
+                        <small>Select your ontology file</small>
+                    </div>
+                    <div class="form-group">
+                        <label>Named Graph URI (optional)</label>
+                        <input type="text" id="owl_named_graph" placeholder="http://example.org/ontology">
+                        <small>Leave empty to use default graph</small>
+                    </div>
+                </div>
+                <div class="card-footer">
+                    <button class="btn btn-success" onclick="uploadOWL()">
+                        📤 Upload Ontology
+                    </button>
+                </div>
+            </div>
+
+            <div id="onto_results" style="margin-top: 20px;"></div>
+        </div>
+
+        <!-- TAB 3: SURVEY DATA UPLOAD -->
+        <div id="data" class="tab-content">
+            <h2 style="margin-bottom: 20px;">Survey Data Upload</h2>
+
+            <!-- Repository Selection -->
+            <div class="card">
+                <div class="card-header">
+                    <div class="card-title">
+                        <span>📦</span>
+                        <span>Select Target Repository</span>
+                    </div>
+                </div>
+                <div class="card-body">
+                    <div class="form-group">
+                        <label>Repository</label>
+                        <div class="input-with-button">
+                            <select id="data_repo_select">
+                                <option value="">-- Select Repository --</option>
+                            </select>
+                            <button class="btn btn-small btn-secondary" onclick="refreshDataRepos()">
+                                🔄
+                            </button>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label>Survey ID</label>
+                        <input type="text" id="survey_id_data" placeholder="123456">
+                        <small>Survey identifier for organizing data</small>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Upload Groups -->
+            <div class="card" style="margin-top: 20px;">
+                <div class="card-header">
+                    <div class="card-title">
+                        <span>📁</span>
+                        <span>Upload Groups</span>
+                    </div>
+                </div>
+                <div class="card-body">
+                    <div class="form-group">
+                        <label>Groups File (.csv)</label>
+                        <div class="input-with-button">
+                            <input type="text" id="groups_file_path" placeholder="Select CSV file..." readonly>
+                            <input type="file" id="groups_file_input" accept=".csv" style="display: none;" onchange="handleGroupsFileSelect(event)">
+                            <button class="btn btn-small btn-secondary" onclick="document.getElementById('groups_file_input').click()">
+                                📁 Browse
+                            </button>
+                        </div>
+                        <small>CSV file will be converted to RDF automatically</small>
+                    </div>
+
+                    <div class="progress-container" id="groups_progress">
+                        <div class="progress-bar">
+                            <div class="progress-fill" style="width: 0%"></div>
+                        </div>
+                        <div class="progress-text">
+                            <span>Processing...</span>
+                            <span>0%</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-footer">
+                    <button class="btn btn-success" onclick="uploadGroups()">
+                        📤 Upload Groups
+                    </button>
+                </div>
+            </div>
+
+            <!-- Upload Questions -->
+            <div class="card" style="margin-top: 20px;">
+                <div class="card-header">
+                    <div class="card-title">
+                        <span>❓</span>
+                        <span>Upload Questions</span>
+                    </div>
+                </div>
+                <div class="card-body">
+                    <div class="form-group">
+                        <label>Questions File (.csv)</label>
+                        <div class="input-with-button">
+                            <input type="text" id="questions_file_path" placeholder="Select CSV file..." readonly>
+                            <input type="file" id="questions_file_input" accept=".csv" style="display: none;" onchange="handleQuestionsFileSelect(event)">
+                            <button class="btn btn-small btn-secondary" onclick="document.getElementById('questions_file_input').click()">
+                                📁 Browse
+                            </button>
+                        </div>
+                        <small>CSV file will be converted to RDF automatically</small>
+                    </div>
+
+                    <div class="progress-container" id="questions_progress">
+                        <div class="progress-bar">
+                            <div class="progress-fill" style="width: 0%"></div>
+                        </div>
+                        <div class="progress-text">
+                            <span>Processing...</span>
+                            <span>0%</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-footer">
+                    <button class="btn btn-success" onclick="uploadQuestions()">
+                        📤 Upload Questions
+                    </button>
+                </div>
+            </div>
+
+            <!-- Upload Question properties -->
+            <div class="card" style="margin-top: 20px;">
+                <div class="card-header">
+                    <div class="card-title">
+                        <span>📁</span>
+                        <span>Upload Question properties</span>
+                    </div>
+                </div>
+                <div class="card-body">
+                    <div class="form-group">
+                        <label>Properties File (.json)</label>
+                        <div class="input-with-button">
+                            <input type="text" id="question_properties_file_path" placeholder="Select Json file..." readonly>
+                            <input type="file" id="question_properties_file_input" accept=".json" style="display: none;" onchange="handleQuestionsPropertiesFileSelect(event)">
+                            <button class="btn btn-small btn-secondary" onclick="document.getElementById('question_properties_file_input').click()">
+                                📁 Browse
+                            </button>
+                        </div>
+                        <small>Json file will be converted to RDF automatically</small>
+                    </div>
+
+                    <div class="progress-container" id="question_properties_progress">
+                        <div class="progress-bar">
+                            <div class="progress-fill" style="width: 0%"></div>
+                        </div>
+                        <div class="progress-text">
+                            <span>Processing...</span>
+                            <span>0%</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-footer">
+                    <button class="btn btn-success" onclick="uploadProperitesQuestion()">
+                        📤 Upload Properites Question
+                    </button>
+                </div>
+            </div>
+
+            <!-- Upload All -->
+            <div class="card" style="margin-top: 20px; border-color: #66bb6a;">
+                <div class="card-header" style="background: #e8f5e9;">
+                    <div class="card-title" style="color: #2e7d32;">
+                        <span>🚀</span>
+                        <span>Batch Upload</span>
+                    </div>
+                </div>
+                <div class="card-body">
+                    <p style="color: #666; margin-bottom: 15px;">
+                        Upload all survey data (groups and questions) in sequence. Make sure both files are selected above.
+                    </p>
+                    <div class="progress-container" id="batch_progress">
+                        <div class="progress-bar">
+                            <div class="progress-fill" style="width: 0%"></div>
+                        </div>
+                        <div class="progress-text">
+                            <span>Processing...</span>
+                            <span>0%</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-footer">
+                    <button class="btn btn-success" onclick="uploadAllData()">
+                        🚀 Upload All Data
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="../static/js/common.js"></script>
+    <script src="../static/js/graphdb.js"></script>
+</body>
+</html>
