@@ -1,255 +1,1350 @@
-<rdf:RDF
-    xmlns:terms="http://purl.org/dc/terms/"
-    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
-    xmlns:dc="http://purl.org/dc/elements/1.1/"
-    xmlns:vs="http://www.w3.org/2003/06/sw-vocab-status/ns#"
-    xmlns="https://w3id.org/fossr/ontology/bdi-tests/"
-    xmlns:owl="http://www.w3.org/2002/07/owl#"
-    xmlns:bdi="https://w3id.org/fossr/ontology/bdi/"
-    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
-    xmlns:vann="http://purl.org/vocab/vann/"
-    xmlns:xsd="http://www.w3.org/2001/XMLSchema#">
-  <owl:Class rdf:about="http://purl.org/vocommons/voaf#Vocabulary"/>
-  <bdi:BeliefProcess rdf:about="https://w3id.org/fossr/ontology/bdi-tests/BP_FailureRevision">
-    <bdi:isTriggeredBy>
-      <bdi:Belief rdf:about="https://w3id.org/fossr/ontology/bdi-tests/Belief_ExamFailed">
-        <bdi:refersTo>
-          <bdi:WorldState rdf:about="https://w3id.org/fossr/ontology/bdi-tests/WS_ExamSchedule">
-            <rdfs:label>Examination schedule</rdfs:label>
-          </bdi:WorldState>
-        </bdi:refersTo>
-        <bdi:atTime>
-          <bdi:TimeInterval rdf:about="https://w3id.org/fossr/ontology/bdi-tests/TI_ExamResult">
-            <bdi:hasStartTime>
-              <bdi:TimeInstant rdf:about="https://w3id.org/fossr/ontology/bdi-tests/TI_Start_ExamResult">
-                <bdi:time rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime"
-                >2025-01-15T10:00:00</bdi:time>
-              </bdi:TimeInstant>
-            </bdi:hasStartTime>
-            <rdfs:label>Moment of exam result notification</rdfs:label>
-          </bdi:TimeInterval>
-        </bdi:atTime>
-        <rdfs:label>I failed the Algorithms examination</rdfs:label>
-      </bdi:Belief>
-    </bdi:isTriggeredBy>
-    <bdi:generates rdf:resource="https://w3id.org/fossr/ontology/bdi-tests/Belief_ExamFailed"/>
-    <bdi:reasonsUpon rdf:resource="https://w3id.org/fossr/ontology/bdi-tests/Belief_ExamFailed"/>
-    <bdi:isProcessedBy>
-      <bdi:Agent rdf:about="https://w3id.org/fossr/ontology/bdi-tests/Mark">
-        <bdi:hasMentalState>
-          <bdi:Intention rdf:about="https://w3id.org/fossr/ontology/bdi-tests/Intention_ResitAlgorithms">
-            <bdi:fulfils>
-              <bdi:Desire rdf:about="https://w3id.org/fossr/ontology/bdi-tests/Desire_Graduate">
-                <rdfs:label>Obtain a Computer Science degree</rdfs:label>
-                <bdi:isMotivatedBy>
-                  <bdi:Belief rdf:about="https://w3id.org/fossr/ontology/bdi-tests/Belief_Employment">
-                    <bdi:refersTo>
-                      <bdi:WorldState rdf:about="https://w3id.org/fossr/ontology/bdi-tests/WS_AcademicCalendar">
-                        <rdfs:label>Academic calendar 2024/2025</rdfs:label>
-                      </bdi:WorldState>
-                    </bdi:refersTo>
-                    <bdi:motivates rdf:resource="https://w3id.org/fossr/ontology/bdi-tests/Desire_Graduate"/>
-                    <bdi:atTime>
-                      <bdi:TimeInterval rdf:about="https://w3id.org/fossr/ontology/bdi-tests/TI_AY2024">
-                        <bdi:hasStartTime>
-                          <bdi:TimeInstant rdf:about="https://w3id.org/fossr/ontology/bdi-tests/TI_Start_AY2024">
-                            <bdi:time rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime"
-                            >2024-09-01T00:00:00</bdi:time>
-                          </bdi:TimeInstant>
-                        </bdi:hasStartTime>
-                        <bdi:hasEndTime>
-                          <bdi:TimeInstant rdf:about="https://w3id.org/fossr/ontology/bdi-tests/TI_End_AY2024">
-                            <bdi:time rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime"
-                            >2025-07-31T00:00:00</bdi:time>
-                          </bdi:TimeInstant>
-                        </bdi:hasEndTime>
-                        <rdfs:label>Academic year 2024/2025</rdfs:label>
-                      </bdi:TimeInterval>
-                    </bdi:atTime>
-                    <rdfs:label>CS graduates find employment easily</rdfs:label>
-                  </bdi:Belief>
-                </bdi:isMotivatedBy>
-                <bdi:hasPart>
-                  <bdi:Intention rdf:about="https://w3id.org/fossr/ontology/bdi-tests/Intention_Graduation">
-                    <bdi:fulfils rdf:resource="https://w3id.org/fossr/ontology/bdi-tests/Desire_Graduate"/>
-                    <bdi:atTime rdf:resource="https://w3id.org/fossr/ontology/bdi-tests/TI_AY2024"/>
-                    <rdfs:label>Attend the graduation ceremony</rdfs:label>
-                  </bdi:Intention>
-                </bdi:hasPart>
-                <bdi:atTime rdf:resource="https://w3id.org/fossr/ontology/bdi-tests/TI_AY2024"/>
-                <bdi:hasPart>
-                  <bdi:Belief rdf:about="https://w3id.org/fossr/ontology/bdi-tests/Belief_GoodAtScience">
-                    <bdi:motivates rdf:resource="https://w3id.org/fossr/ontology/bdi-tests/Desire_Graduate"/>
-                    <bdi:atTime rdf:resource="https://w3id.org/fossr/ontology/bdi-tests/TI_AY2024"/>
-                    <rdfs:label>I am good at science</rdfs:label>
-                  </bdi:Belief>
-                </bdi:hasPart>
-                <bdi:hasPart>
-                  <bdi:Intention rdf:about="https://w3id.org/fossr/ontology/bdi-tests/Intention_PassExams">
-                    <bdi:specifies>
-                      <bdi:Plan rdf:about="https://w3id.org/fossr/ontology/bdi-tests/Plan_Graduate">
-                        <rdfs:label>Graduation plan</rdfs:label>
-                        <bdi:hasPart>
-                          <bdi:Plan rdf:about="https://w3id.org/fossr/ontology/bdi-tests/Plan_AlgorithmsCourse">
-                            <bdi:addresses>
-                              <bdi:Goal rdf:about="https://w3id.org/fossr/ontology/bdi-tests/Goal_GraduateCS">
-                                <rdfs:label>Graduate in Computer Science</rdfs:label>
-                              </bdi:Goal>
-                            </bdi:addresses>
-                            <rdfs:label>Plan for Algorithms examination</rdfs:label>
-                          </bdi:Plan>
-                        </bdi:hasPart>
-                        <bdi:addresses rdf:resource="https://w3id.org/fossr/ontology/bdi-tests/Goal_GraduateCS"/>
-                        <bdi:hasComponent>
-                          <bdi:Task rdf:about="https://w3id.org/fossr/ontology/bdi-tests/Task_SitExam">
-                            <bdi:precedes>
-                              <bdi:Task rdf:about="https://w3id.org/fossr/ontology/bdi-tests/Task_PayFees">
-                                <bdi:precedes>
-                                  <bdi:Task rdf:about="https://w3id.org/fossr/ontology/bdi-tests/Task_Graduation">
-                                    <rdfs:label>Attend graduation ceremony</rdfs:label>
-                                  </bdi:Task>
-                                </bdi:precedes>
-                                <rdfs:label>Pay tuition fees</rdfs:label>
-                              </bdi:Task>
-                            </bdi:precedes>
-                            <rdfs:label>Sit the examination</rdfs:label>
-                          </bdi:Task>
-                        </bdi:hasComponent>
-                        <bdi:hasComponent>
-                          <bdi:Task rdf:about="https://w3id.org/fossr/ontology/bdi-tests/Task_RegisterExam">
-                            <bdi:precedes rdf:resource="https://w3id.org/fossr/ontology/bdi-tests/Task_SitExam"/>
-                            <bdi:hasValidity>
-                              <bdi:TimeInterval rdf:about="https://w3id.org/fossr/ontology/bdi-tests/TI_RegisterWindow">
-                                <bdi:hasStartTime>
-                                  <bdi:TimeInstant rdf:about="https://w3id.org/fossr/ontology/bdi-tests/TI_Start_Register">
-                                    <bdi:time rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime"
-                                    >2024-12-01T00:00:00</bdi:time>
-                                  </bdi:TimeInstant>
-                                </bdi:hasStartTime>
-                                <bdi:hasEndTime>
-                                  <bdi:TimeInstant rdf:about="https://w3id.org/fossr/ontology/bdi-tests/TI_End_Register">
-                                    <bdi:time rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime"
-                                    >2024-12-20T00:00:00</bdi:time>
-                                  </bdi:TimeInstant>
-                                </bdi:hasEndTime>
-                                <rdfs:label>Examination registration window</rdfs:label>
-                              </bdi:TimeInterval>
-                            </bdi:hasValidity>
-                            <rdfs:label>Register for examination</rdfs:label>
-                          </bdi:Task>
-                        </bdi:hasComponent>
-                        <bdi:beginsWith>
-                          <bdi:Task rdf:about="https://w3id.org/fossr/ontology/bdi-tests/Task_Enrol">
-                            <bdi:precedes rdf:resource="https://w3id.org/fossr/ontology/bdi-tests/Task_RegisterExam"/>
-                            <rdfs:label>Enrol in the programme</rdfs:label>
-                          </bdi:Task>
-                        </bdi:beginsWith>
-                        <bdi:hasComponent rdf:resource="https://w3id.org/fossr/ontology/bdi-tests/Task_Enrol"/>
-                        <bdi:endsWith rdf:resource="https://w3id.org/fossr/ontology/bdi-tests/Task_Graduation"/>
-                        <bdi:hasComponent rdf:resource="https://w3id.org/fossr/ontology/bdi-tests/Task_Graduation"/>
-                        <bdi:hasComponent rdf:resource="https://w3id.org/fossr/ontology/bdi-tests/Task_PayFees"/>
-                      </bdi:Plan>
-                    </bdi:specifies>
-                    <bdi:isSupportedBy rdf:resource="https://w3id.org/fossr/ontology/bdi-tests/Belief_GoodAtScience"/>
-                    <bdi:fulfils rdf:resource="https://w3id.org/fossr/ontology/bdi-tests/Desire_Graduate"/>
-                    <bdi:atTime rdf:resource="https://w3id.org/fossr/ontology/bdi-tests/TI_AY2024"/>
-                    <rdfs:label>Pass all required examinations</rdfs:label>
-                  </bdi:Intention>
-                </bdi:hasPart>
-                <bdi:isMotivatedBy rdf:resource="https://w3id.org/fossr/ontology/bdi-tests/Belief_GoodAtScience"/>
-                <bdi:isMotivatedBy>
-                  <bdi:Belief rdf:about="https://w3id.org/fossr/ontology/bdi-tests/Belief_LogicalSkills">
-                    <bdi:motivates rdf:resource="https://w3id.org/fossr/ontology/bdi-tests/Desire_Graduate"/>
-                    <bdi:atTime rdf:resource="https://w3id.org/fossr/ontology/bdi-tests/TI_AY2024"/>
-                    <rdfs:label>I have strong logical reasoning abilities</rdfs:label>
-                  </bdi:Belief>
-                </bdi:isMotivatedBy>
-                <bdi:isMotivatedBy>
-                  <bdi:Belief rdf:about="https://w3id.org/fossr/ontology/bdi-tests/Belief_LovesPC">
-                    <bdi:motivates rdf:resource="https://w3id.org/fossr/ontology/bdi-tests/Desire_Graduate"/>
-                    <bdi:atTime rdf:resource="https://w3id.org/fossr/ontology/bdi-tests/TI_AY2024"/>
-                    <rdfs:label>I enjoy spending long hours at a computer</rdfs:label>
-                  </bdi:Belief>
-                </bdi:isMotivatedBy>
-                <bdi:hasPart>
-                  <bdi:Intention rdf:about="https://w3id.org/fossr/ontology/bdi-tests/Intention_WriteThesis">
-                    <bdi:fulfils rdf:resource="https://w3id.org/fossr/ontology/bdi-tests/Desire_Graduate"/>
-                    <bdi:atTime rdf:resource="https://w3id.org/fossr/ontology/bdi-tests/TI_AY2024"/>
-                    <rdfs:label>Write the thesis</rdfs:label>
-                  </bdi:Intention>
-                </bdi:hasPart>
-                <bdi:hasPart rdf:resource="https://w3id.org/fossr/ontology/bdi-tests/Belief_Employment"/>
-              </bdi:Desire>
-            </bdi:fulfils>
-            <bdi:atTime rdf:resource="https://w3id.org/fossr/ontology/bdi-tests/TI_ExamResult"/>
-            <rdfs:label>Register for the Algorithms resit</rdfs:label>
-          </bdi:Intention>
-        </bdi:hasMentalState>
-        <bdi:hasMentalState rdf:resource="https://w3id.org/fossr/ontology/bdi-tests/Desire_Graduate"/>
-        <bdi:hasMentalState rdf:resource="https://w3id.org/fossr/ontology/bdi-tests/Belief_Employment"/>
-        <bdi:hasMentalState rdf:resource="https://w3id.org/fossr/ontology/bdi-tests/Intention_Graduation"/>
-        <bdi:cognises rdf:resource="https://w3id.org/fossr/ontology/bdi-tests/Belief_LovesPC"/>
-        <bdi:hasMentalState rdf:resource="https://w3id.org/fossr/ontology/bdi-tests/Intention_PassExams"/>
-        <bdi:hasMentalState rdf:resource="https://w3id.org/fossr/ontology/bdi-tests/Belief_ExamFailed"/>
-        <bdi:cognises rdf:resource="https://w3id.org/fossr/ontology/bdi-tests/Desire_Graduate"/>
-        <bdi:cognises rdf:resource="https://w3id.org/fossr/ontology/bdi-tests/Belief_LogicalSkills"/>
-        <bdi:hasMentalState rdf:resource="https://w3id.org/fossr/ontology/bdi-tests/Belief_LovesPC"/>
-        <bdi:perceives rdf:resource="https://w3id.org/fossr/ontology/bdi-tests/WS_ExamSchedule"/>
-        <bdi:hasMentalState rdf:resource="https://w3id.org/fossr/ontology/bdi-tests/Belief_LogicalSkills"/>
-        <bdi:hasMentalState rdf:resource="https://w3id.org/fossr/ontology/bdi-tests/Belief_GoodAtScience"/>
-        <bdi:perceives rdf:resource="https://w3id.org/fossr/ontology/bdi-tests/WS_AcademicCalendar"/>
-        <bdi:cognises rdf:resource="https://w3id.org/fossr/ontology/bdi-tests/Intention_PassExams"/>
-        <bdi:cognises rdf:resource="https://w3id.org/fossr/ontology/bdi-tests/Intention_WriteThesis"/>
-        <bdi:cognises rdf:resource="https://w3id.org/fossr/ontology/bdi-tests/Belief_GoodAtScience"/>
-        <bdi:cognises rdf:resource="https://w3id.org/fossr/ontology/bdi-tests/Belief_Employment"/>
-        <bdi:cognises rdf:resource="https://w3id.org/fossr/ontology/bdi-tests/Intention_Graduation"/>
-        <bdi:cognises rdf:resource="https://w3id.org/fossr/ontology/bdi-tests/Belief_ExamFailed"/>
-        <bdi:cognises rdf:resource="https://w3id.org/fossr/ontology/bdi-tests/Intention_ResitAlgorithms"/>
-        <bdi:hasMentalState rdf:resource="https://w3id.org/fossr/ontology/bdi-tests/Intention_WriteThesis"/>
-      </bdi:Agent>
-    </bdi:isProcessedBy>
-    <bdi:atTime rdf:resource="https://w3id.org/fossr/ontology/bdi-tests/TI_ExamResult"/>
-    <rdfs:label>Belief revision upon exam failure</rdfs:label>
-  </bdi:BeliefProcess>
-  <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/rights"/>
-  <bdi:Planning rdf:about="https://w3id.org/fossr/ontology/bdi-tests/Planning_Graduate">
-    <bdi:reasonsUpon rdf:resource="https://w3id.org/fossr/ontology/bdi-tests/Intention_PassExams"/>
-    <bdi:isProcessedBy rdf:resource="https://w3id.org/fossr/ontology/bdi-tests/Mark"/>
-    <bdi:defines rdf:resource="https://w3id.org/fossr/ontology/bdi-tests/Plan_Graduate"/>
-    <bdi:atTime rdf:resource="https://w3id.org/fossr/ontology/bdi-tests/TI_AY2024"/>
-    <rdfs:label>Planning process for graduation</rdfs:label>
-  </bdi:Planning>
-  <owl:AnnotationProperty rdf:about="http://purl.org/vocab/vann/preferredNamespacePrefix"/>
-  <bdi:Justification rdf:about="https://w3id.org/fossr/ontology/bdi-tests/Justification_Graduate">
-    <bdi:justifies rdf:resource="https://w3id.org/fossr/ontology/bdi-tests/Desire_Graduate"/>
-    <rdfs:label>Mark's academic background justifies the desire to graduate</rdfs:label>
-  </bdi:Justification>
-  <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/creator"/>
-  <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/publisher"/>
-  <owl:AnnotationProperty rdf:about="http://www.w3.org/1999/02/22-rdf-syntax-ns#type"/>
-  <bdi:IntentionProcess rdf:about="https://w3id.org/fossr/ontology/bdi-tests/IP_ResitIntention">
-    <bdi:isTriggeredBy rdf:resource="https://w3id.org/fossr/ontology/bdi-tests/Belief_ExamFailed"/>
-    <bdi:generates rdf:resource="https://w3id.org/fossr/ontology/bdi-tests/Intention_ResitAlgorithms"/>
-    <bdi:atTime rdf:resource="https://w3id.org/fossr/ontology/bdi-tests/TI_ExamResult"/>
-    <rdfs:label>Intention refinement for resit</rdfs:label>
-  </bdi:IntentionProcess>
-  <bdi:Plan rdf:about="https://w3id.org/fossr/ontology/bdi-tests/Plan_ResitAlgorithms">
-    <bdi:addresses rdf:resource="https://w3id.org/fossr/ontology/bdi-tests/Goal_GraduateCS"/>
-    <rdfs:label>Revised plan including Algorithms resit</rdfs:label>
-  </bdi:Plan>
-  <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/modified"/>
-  <owl:AnnotationProperty rdf:about="http://www.w3.org/2003/06/sw-vocab-status/ns#term_status"/>
-  <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/description"/>
-  <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/issued"/>
-  <owl:AnnotationProperty rdf:about="http://purl.org/vocab/vann/preferredNamespaceUri"/>
-  <bdi:DesireProcess rdf:about="https://w3id.org/fossr/ontology/bdi-tests/DP_ResitDesire">
-    <bdi:modifies rdf:resource="https://w3id.org/fossr/ontology/bdi-tests/Desire_Graduate"/>
-    <bdi:isTriggeredBy rdf:resource="https://w3id.org/fossr/ontology/bdi-tests/Belief_ExamFailed"/>
-    <bdi:reasonsUpon rdf:resource="https://w3id.org/fossr/ontology/bdi-tests/Desire_Graduate"/>
-    <bdi:isProcessedBy rdf:resource="https://w3id.org/fossr/ontology/bdi-tests/Mark"/>
-    <bdi:atTime rdf:resource="https://w3id.org/fossr/ontology/bdi-tests/TI_ExamResult"/>
-    <rdfs:label>Desire update to resit the exam</rdfs:label>
-  </bdi:DesireProcess>
-  <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/license"/>
-  <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/title"/>
+<?xml version="1.0"?>
+<rdf:RDF xmlns="https://anonymous.4open.science/r/survey-builder-8232/ontology/limesurvey.ttl"
+     xml:base="https://anonymous.4open.science/r/survey-builder-8232/ontology/limesurvey.ttl"
+     xmlns:ex="https://anonymous.4open.science/r/survey-builder-8232/ontology/survey-test/data.ttl"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+    <owl:Ontology/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- https://w3id.org/fossr/ontology/limesurvey/answerOrder -->
+
+    <owl:AnnotationProperty rdf:about="https://w3id.org/fossr/ontology/limesurvey/answerOrder"/>
+    
+
+
+    <!-- https://w3id.org/fossr/ontology/limesurvey/answerScaleId -->
+
+    <owl:AnnotationProperty rdf:about="https://w3id.org/fossr/ontology/limesurvey/answerScaleId"/>
+    
+
+
+    <!-- https://w3id.org/fossr/ontology/limesurvey/answerText -->
+
+    <owl:AnnotationProperty rdf:about="https://w3id.org/fossr/ontology/limesurvey/answerText"/>
+    
+
+
+    <!-- https://w3id.org/fossr/ontology/limesurvey/assessmentValue -->
+
+    <owl:AnnotationProperty rdf:about="https://w3id.org/fossr/ontology/limesurvey/assessmentValue"/>
+    
+
+
+    <!-- https://w3id.org/fossr/ontology/limesurvey/attributeRandomGroup -->
+
+    <owl:AnnotationProperty rdf:about="https://w3id.org/fossr/ontology/limesurvey/attributeRandomGroup"/>
+    
+
+
+    <!-- https://w3id.org/fossr/ontology/limesurvey/attributeTimeLimit -->
+
+    <owl:AnnotationProperty rdf:about="https://w3id.org/fossr/ontology/limesurvey/attributeTimeLimit"/>
+    
+
+
+    <!-- https://w3id.org/fossr/ontology/limesurvey/attributeTimeLimitAction -->
+
+    <owl:AnnotationProperty rdf:about="https://w3id.org/fossr/ontology/limesurvey/attributeTimeLimitAction"/>
+    
+
+
+    <!-- https://w3id.org/fossr/ontology/limesurvey/componentName -->
+
+    <owl:AnnotationProperty rdf:about="https://w3id.org/fossr/ontology/limesurvey/componentName"/>
+    
+
+
+    <!-- https://w3id.org/fossr/ontology/limesurvey/componentValue -->
+
+    <owl:AnnotationProperty rdf:about="https://w3id.org/fossr/ontology/limesurvey/componentValue"/>
+    
+
+
+    <!-- https://w3id.org/fossr/ontology/limesurvey/defaultValueContent -->
+
+    <owl:AnnotationProperty rdf:about="https://w3id.org/fossr/ontology/limesurvey/defaultValueContent"/>
+    
+
+
+    <!-- https://w3id.org/fossr/ontology/limesurvey/derivedFrom -->
+
+    <owl:AnnotationProperty rdf:about="https://w3id.org/fossr/ontology/limesurvey/derivedFrom"/>
+    
+
+
+    <!-- https://w3id.org/fossr/ontology/limesurvey/endTime -->
+
+    <owl:AnnotationProperty rdf:about="https://w3id.org/fossr/ontology/limesurvey/endTime"/>
+    
+
+
+    <!-- https://w3id.org/fossr/ontology/limesurvey/hasAnswerOption -->
+
+    <owl:AnnotationProperty rdf:about="https://w3id.org/fossr/ontology/limesurvey/hasAnswerOption"/>
+    
+
+
+    <!-- https://w3id.org/fossr/ontology/limesurvey/hasAttribute -->
+
+    <owl:AnnotationProperty rdf:about="https://w3id.org/fossr/ontology/limesurvey/hasAttribute"/>
+    
+
+
+    <!-- https://w3id.org/fossr/ontology/limesurvey/hasComponentAttribute -->
+
+    <owl:AnnotationProperty rdf:about="https://w3id.org/fossr/ontology/limesurvey/hasComponentAttribute"/>
+    
+
+
+    <!-- https://w3id.org/fossr/ontology/limesurvey/hasComponentFlowFirstStep -->
+
+    <owl:AnnotationProperty rdf:about="https://w3id.org/fossr/ontology/limesurvey/hasComponentFlowFirstStep"/>
+    
+
+
+    <!-- https://w3id.org/fossr/ontology/limesurvey/hasComponentFlowLastStep -->
+
+    <owl:AnnotationProperty rdf:about="https://w3id.org/fossr/ontology/limesurvey/hasComponentFlowLastStep"/>
+    
+
+
+    <!-- https://w3id.org/fossr/ontology/limesurvey/hasComponentFlowNextStep -->
+
+    <owl:AnnotationProperty rdf:about="https://w3id.org/fossr/ontology/limesurvey/hasComponentFlowNextStep"/>
+    
+
+
+    <!-- https://w3id.org/fossr/ontology/limesurvey/hasComponentFlowPreviusStep -->
+
+    <owl:AnnotationProperty rdf:about="https://w3id.org/fossr/ontology/limesurvey/hasComponentFlowPreviusStep"/>
+    
+
+
+    <!-- https://w3id.org/fossr/ontology/limesurvey/hasComponentFlowStep -->
+
+    <owl:AnnotationProperty rdf:about="https://w3id.org/fossr/ontology/limesurvey/hasComponentFlowStep"/>
+    
+
+
+    <!-- https://w3id.org/fossr/ontology/limesurvey/hasCondition -->
+
+    <owl:AnnotationProperty rdf:about="https://w3id.org/fossr/ontology/limesurvey/hasCondition"/>
+    
+
+
+    <!-- https://w3id.org/fossr/ontology/limesurvey/hasContent -->
+
+    <owl:AnnotationProperty rdf:about="https://w3id.org/fossr/ontology/limesurvey/hasContent"/>
+    
+
+
+    <!-- https://w3id.org/fossr/ontology/limesurvey/hasDefaultValue -->
+
+    <owl:AnnotationProperty rdf:about="https://w3id.org/fossr/ontology/limesurvey/hasDefaultValue"/>
+    
+
+
+    <!-- https://w3id.org/fossr/ontology/limesurvey/hasFirstQuestionStep -->
+
+    <owl:AnnotationProperty rdf:about="https://w3id.org/fossr/ontology/limesurvey/hasFirstQuestionStep"/>
+    
+
+
+    <!-- https://w3id.org/fossr/ontology/limesurvey/hasGroup -->
+
+    <owl:AnnotationProperty rdf:about="https://w3id.org/fossr/ontology/limesurvey/hasGroup"/>
+    
+
+
+    <!-- https://w3id.org/fossr/ontology/limesurvey/hasGroupFlow -->
+
+    <owl:AnnotationProperty rdf:about="https://w3id.org/fossr/ontology/limesurvey/hasGroupFlow"/>
+    
+
+
+    <!-- https://w3id.org/fossr/ontology/limesurvey/hasId -->
+
+    <owl:AnnotationProperty rdf:about="https://w3id.org/fossr/ontology/limesurvey/hasId"/>
+    
+
+
+    <!-- https://w3id.org/fossr/ontology/limesurvey/hasInstrument -->
+
+    <owl:AnnotationProperty rdf:about="https://w3id.org/fossr/ontology/limesurvey/hasInstrument"/>
+    
+
+
+    <!-- https://w3id.org/fossr/ontology/limesurvey/hasIntervalValidity -->
+
+    <owl:AnnotationProperty rdf:about="https://w3id.org/fossr/ontology/limesurvey/hasIntervalValidity"/>
+    
+
+
+    <!-- https://w3id.org/fossr/ontology/limesurvey/hasLastQuestionStep -->
+
+    <owl:AnnotationProperty rdf:about="https://w3id.org/fossr/ontology/limesurvey/hasLastQuestionStep"/>
+    
+
+
+    <!-- https://w3id.org/fossr/ontology/limesurvey/hasName -->
+
+    <owl:AnnotationProperty rdf:about="https://w3id.org/fossr/ontology/limesurvey/hasName"/>
+    
+
+
+    <!-- https://w3id.org/fossr/ontology/limesurvey/hasNextQuestionStep -->
+
+    <owl:AnnotationProperty rdf:about="https://w3id.org/fossr/ontology/limesurvey/hasNextQuestionStep"/>
+    
+
+
+    <!-- https://w3id.org/fossr/ontology/limesurvey/hasOrder -->
+
+    <owl:AnnotationProperty rdf:about="https://w3id.org/fossr/ontology/limesurvey/hasOrder"/>
+    
+
+
+    <!-- https://w3id.org/fossr/ontology/limesurvey/hasPreviusQuestionStep -->
+
+    <owl:AnnotationProperty rdf:about="https://w3id.org/fossr/ontology/limesurvey/hasPreviusQuestionStep"/>
+    
+
+
+    <!-- https://w3id.org/fossr/ontology/limesurvey/hasQuestion -->
+
+    <owl:AnnotationProperty rdf:about="https://w3id.org/fossr/ontology/limesurvey/hasQuestion"/>
+    
+
+
+    <!-- https://w3id.org/fossr/ontology/limesurvey/hasQuestionFlow -->
+
+    <owl:AnnotationProperty rdf:about="https://w3id.org/fossr/ontology/limesurvey/hasQuestionFlow"/>
+    
+
+
+    <!-- https://w3id.org/fossr/ontology/limesurvey/hasQuestionGroup -->
+
+    <owl:AnnotationProperty rdf:about="https://w3id.org/fossr/ontology/limesurvey/hasQuestionGroup"/>
+    
+
+
+    <!-- https://w3id.org/fossr/ontology/limesurvey/hasQuestionStep -->
+
+    <owl:AnnotationProperty rdf:about="https://w3id.org/fossr/ontology/limesurvey/hasQuestionStep"/>
+    
+
+
+    <!-- https://w3id.org/fossr/ontology/limesurvey/hasRecurrentTimePeriod -->
+
+    <owl:AnnotationProperty rdf:about="https://w3id.org/fossr/ontology/limesurvey/hasRecurrentTimePeriod"/>
+    
+
+
+    <!-- https://w3id.org/fossr/ontology/limesurvey/hasSubAttribute -->
+
+    <owl:AnnotationProperty rdf:about="https://w3id.org/fossr/ontology/limesurvey/hasSubAttribute"/>
+    
+
+
+    <!-- https://w3id.org/fossr/ontology/limesurvey/hasSubquestion -->
+
+    <owl:AnnotationProperty rdf:about="https://w3id.org/fossr/ontology/limesurvey/hasSubquestion"/>
+    
+
+
+    <!-- https://w3id.org/fossr/ontology/limesurvey/hasSurveyId -->
+
+    <owl:AnnotationProperty rdf:about="https://w3id.org/fossr/ontology/limesurvey/hasSurveyId"/>
+    
+
+
+    <!-- https://w3id.org/fossr/ontology/limesurvey/hasSurveyVersion -->
+
+    <owl:AnnotationProperty rdf:about="https://w3id.org/fossr/ontology/limesurvey/hasSurveyVersion"/>
+    
+
+
+    <!-- https://w3id.org/fossr/ontology/limesurvey/hasType -->
+
+    <owl:AnnotationProperty rdf:about="https://w3id.org/fossr/ontology/limesurvey/hasType"/>
+    
+
+
+    <!-- https://w3id.org/fossr/ontology/limesurvey/hasVariable -->
+
+    <owl:AnnotationProperty rdf:about="https://w3id.org/fossr/ontology/limesurvey/hasVariable"/>
+    
+
+
+    <!-- https://w3id.org/fossr/ontology/limesurvey/id -->
+
+    <owl:AnnotationProperty rdf:about="https://w3id.org/fossr/ontology/limesurvey/id"/>
+    
+
+
+    <!-- https://w3id.org/fossr/ontology/limesurvey/isEncrypted -->
+
+    <owl:AnnotationProperty rdf:about="https://w3id.org/fossr/ontology/limesurvey/isEncrypted"/>
+    
+
+
+    <!-- https://w3id.org/fossr/ontology/limesurvey/isMandatory -->
+
+    <owl:AnnotationProperty rdf:about="https://w3id.org/fossr/ontology/limesurvey/isMandatory"/>
+    
+
+
+    <!-- https://w3id.org/fossr/ontology/limesurvey/nameText -->
+
+    <owl:AnnotationProperty rdf:about="https://w3id.org/fossr/ontology/limesurvey/nameText"/>
+    
+
+
+    <!-- https://w3id.org/fossr/ontology/limesurvey/order -->
+
+    <owl:AnnotationProperty rdf:about="https://w3id.org/fossr/ontology/limesurvey/order"/>
+    
+
+
+    <!-- https://w3id.org/fossr/ontology/limesurvey/randomize -->
+
+    <owl:AnnotationProperty rdf:about="https://w3id.org/fossr/ontology/limesurvey/randomize"/>
+    
+
+
+    <!-- https://w3id.org/fossr/ontology/limesurvey/relevance -->
+
+    <owl:AnnotationProperty rdf:about="https://w3id.org/fossr/ontology/limesurvey/relevance"/>
+    
+
+
+    <!-- https://w3id.org/fossr/ontology/limesurvey/startTime -->
+
+    <owl:AnnotationProperty rdf:about="https://w3id.org/fossr/ontology/limesurvey/startTime"/>
+    
+
+
+    <!-- https://w3id.org/fossr/ontology/limesurvey/text -->
+
+    <owl:AnnotationProperty rdf:about="https://w3id.org/fossr/ontology/limesurvey/text"/>
+    
+
+
+    <!-- https://w3id.org/fossr/ontology/limesurvey/variableCod -->
+
+    <owl:AnnotationProperty rdf:about="https://w3id.org/fossr/ontology/limesurvey/variableCod"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- https://w3id.org/fossr/ontology/limesurvey/AnswerOption -->
+
+    <owl:Class rdf:about="https://w3id.org/fossr/ontology/limesurvey/AnswerOption"/>
+    
+
+
+    <!-- https://w3id.org/fossr/ontology/limesurvey/ComponentAttribute -->
+
+    <owl:Class rdf:about="https://w3id.org/fossr/ontology/limesurvey/ComponentAttribute"/>
+    
+
+
+    <!-- https://w3id.org/fossr/ontology/limesurvey/Content -->
+
+    <owl:Class rdf:about="https://w3id.org/fossr/ontology/limesurvey/Content"/>
+    
+
+
+    <!-- https://w3id.org/fossr/ontology/limesurvey/DefaultValue -->
+
+    <owl:Class rdf:about="https://w3id.org/fossr/ontology/limesurvey/DefaultValue"/>
+    
+
+
+    <!-- https://w3id.org/fossr/ontology/limesurvey/GroupFlow -->
+
+    <owl:Class rdf:about="https://w3id.org/fossr/ontology/limesurvey/GroupFlow"/>
+    
+
+
+    <!-- https://w3id.org/fossr/ontology/limesurvey/GroupFlowStep -->
+
+    <owl:Class rdf:about="https://w3id.org/fossr/ontology/limesurvey/GroupFlowStep"/>
+    
+
+
+    <!-- https://w3id.org/fossr/ontology/limesurvey/Identifier -->
+
+    <owl:Class rdf:about="https://w3id.org/fossr/ontology/limesurvey/Identifier"/>
+    
+
+
+    <!-- https://w3id.org/fossr/ontology/limesurvey/Name -->
+
+    <owl:Class rdf:about="https://w3id.org/fossr/ontology/limesurvey/Name"/>
+    
+
+
+    <!-- https://w3id.org/fossr/ontology/limesurvey/Order -->
+
+    <owl:Class rdf:about="https://w3id.org/fossr/ontology/limesurvey/Order"/>
+    
+
+
+    <!-- https://w3id.org/fossr/ontology/limesurvey/Question -->
+
+    <owl:Class rdf:about="https://w3id.org/fossr/ontology/limesurvey/Question"/>
+    
+
+
+    <!-- https://w3id.org/fossr/ontology/limesurvey/QuestionAttribute -->
+
+    <owl:Class rdf:about="https://w3id.org/fossr/ontology/limesurvey/QuestionAttribute"/>
+    
+
+
+    <!-- https://w3id.org/fossr/ontology/limesurvey/QuestionFlow -->
+
+    <owl:Class rdf:about="https://w3id.org/fossr/ontology/limesurvey/QuestionFlow"/>
+    
+
+
+    <!-- https://w3id.org/fossr/ontology/limesurvey/QuestionGroup -->
+
+    <owl:Class rdf:about="https://w3id.org/fossr/ontology/limesurvey/QuestionGroup"/>
+    
+
+
+    <!-- https://w3id.org/fossr/ontology/limesurvey/QuestionStep -->
+
+    <owl:Class rdf:about="https://w3id.org/fossr/ontology/limesurvey/QuestionStep"/>
+    
+
+
+    <!-- https://w3id.org/fossr/ontology/limesurvey/QuestionType -->
+
+    <owl:Class rdf:about="https://w3id.org/fossr/ontology/limesurvey/QuestionType"/>
+    
+
+
+    <!-- https://w3id.org/fossr/ontology/limesurvey/RecurrentTimePeriod -->
+
+    <owl:Class rdf:about="https://w3id.org/fossr/ontology/limesurvey/RecurrentTimePeriod"/>
+    
+
+
+    <!-- https://w3id.org/fossr/ontology/limesurvey/Relevance -->
+
+    <owl:Class rdf:about="https://w3id.org/fossr/ontology/limesurvey/Relevance"/>
+    
+
+
+    <!-- https://w3id.org/fossr/ontology/limesurvey/Study -->
+
+    <owl:Class rdf:about="https://w3id.org/fossr/ontology/limesurvey/Study"/>
+    
+
+
+    <!-- https://w3id.org/fossr/ontology/limesurvey/Subquestion -->
+
+    <owl:Class rdf:about="https://w3id.org/fossr/ontology/limesurvey/Subquestion"/>
+    
+
+
+    <!-- https://w3id.org/fossr/ontology/limesurvey/Survey -->
+
+    <owl:Class rdf:about="https://w3id.org/fossr/ontology/limesurvey/Survey"/>
+    
+
+
+    <!-- https://w3id.org/fossr/ontology/limesurvey/SurveyVersion -->
+
+    <owl:Class rdf:about="https://w3id.org/fossr/ontology/limesurvey/SurveyVersion"/>
+    
+
+
+    <!-- https://w3id.org/fossr/ontology/limesurvey/TimeInterval -->
+
+    <owl:Class rdf:about="https://w3id.org/fossr/ontology/limesurvey/TimeInterval"/>
+    
+
+
+    <!-- https://w3id.org/fossr/ontology/limesurvey/Variable -->
+
+    <owl:Class rdf:about="https://w3id.org/fossr/ontology/limesurvey/Variable"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- https://w3id.org/fossr/data/test/AnswerOption_Always -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/fossr/data/test/AnswerOption_Always">
+        <rdf:type rdf:resource="https://w3id.org/fossr/ontology/limesurvey/AnswerOption"/>
+        <answerOrder rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</answerOrder>
+        <answerScaleId rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</answerScaleId>
+        <answerText>Always</answerText>
+        <assessmentValue rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</assessmentValue>
+        <componentValue>A1</componentValue>
+        <hasId rdf:resource="https://w3id.org/fossr/data/test/Identifier_AO1"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/fossr/data/test/AnswerOption_Never -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/fossr/data/test/AnswerOption_Never">
+        <rdf:type rdf:resource="https://w3id.org/fossr/ontology/limesurvey/AnswerOption"/>
+        <answerOrder rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</answerOrder>
+        <answerScaleId rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</answerScaleId>
+        <answerText>Never</answerText>
+        <assessmentValue rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">-1</assessmentValue>
+        <componentValue>A3</componentValue>
+        <hasId rdf:resource="https://w3id.org/fossr/data/test/Identifier_AO3"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/fossr/data/test/AnswerOption_Sometimes -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/fossr/data/test/AnswerOption_Sometimes">
+        <rdf:type rdf:resource="https://w3id.org/fossr/ontology/limesurvey/AnswerOption"/>
+        <answerOrder rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</answerOrder>
+        <answerScaleId rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</answerScaleId>
+        <answerText>Sometimes</answerText>
+        <assessmentValue rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</assessmentValue>
+        <componentValue>A2</componentValue>
+        <hasId rdf:resource="https://w3id.org/fossr/data/test/Identifier_AO2"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/fossr/data/test/Attr_QG_Archiving_relevance -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/fossr/data/test/Attr_QG_Archiving_relevance">
+        <rdf:type rdf:resource="https://w3id.org/fossr/ontology/limesurvey/ComponentAttribute"/>
+        <componentName>relevance</componentName>
+        <componentValue>1</componentValue>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/fossr/data/test/Attr_QG_Demographics_mandatory -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/fossr/data/test/Attr_QG_Demographics_mandatory">
+        <rdf:type rdf:resource="https://w3id.org/fossr/ontology/limesurvey/ComponentAttribute"/>
+        <componentName>mandatory</componentName>
+        <componentValue>N</componentValue>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/fossr/data/test/Attr_Q_Archive_order -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/fossr/data/test/Attr_Q_Archive_order">
+        <rdf:type rdf:resource="https://w3id.org/fossr/ontology/limesurvey/ComponentAttribute"/>
+        <componentName>question_order</componentName>
+        <componentValue>3</componentValue>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/fossr/data/test/Attr_Q_Institution_order -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/fossr/data/test/Attr_Q_Institution_order">
+        <rdf:type rdf:resource="https://w3id.org/fossr/ontology/limesurvey/ComponentAttribute"/>
+        <componentName>question_order</componentName>
+        <componentValue>2</componentValue>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/fossr/data/test/Attr_Q_Title_order -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/fossr/data/test/Attr_Q_Title_order">
+        <rdf:type rdf:resource="https://w3id.org/fossr/ontology/limesurvey/ComponentAttribute"/>
+        <componentName>question_order</componentName>
+        <componentValue>1</componentValue>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/fossr/data/test/Attr_Subq_Who_label -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/fossr/data/test/Attr_Subq_Who_label">
+        <rdf:type rdf:resource="https://w3id.org/fossr/ontology/limesurvey/ComponentAttribute"/>
+        <componentName>other_replace_word</componentName>
+        <componentValue>Who?</componentValue>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/fossr/data/test/Content_QG_Archiving -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/fossr/data/test/Content_QG_Archiving">
+        <rdf:type rdf:resource="https://w3id.org/fossr/ontology/limesurvey/Content"/>
+        <text>This section covers practices regarding archiving research data.</text>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/fossr/data/test/Content_QG_Demographics -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/fossr/data/test/Content_QG_Demographics">
+        <rdf:type rdf:resource="https://w3id.org/fossr/ontology/limesurvey/Content"/>
+        <text>This section collects general information about the respondent.</text>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/fossr/data/test/Content_QG_Social -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/fossr/data/test/Content_QG_Social">
+        <rdf:type rdf:resource="https://w3id.org/fossr/ontology/limesurvey/Content"/>
+        <text>This section collects social background information.</text>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/fossr/data/test/Content_Q_Age -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/fossr/data/test/Content_Q_Age">
+        <rdf:type rdf:resource="https://w3id.org/fossr/ontology/limesurvey/Content"/>
+        <text>What is your age?</text>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/fossr/data/test/Content_Q_Archive -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/fossr/data/test/Content_Q_Archive">
+        <rdf:type rdf:resource="https://w3id.org/fossr/ontology/limesurvey/Content"/>
+        <text>Do you archive your research data?</text>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/fossr/data/test/Content_Q_Institution -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/fossr/data/test/Content_Q_Institution">
+        <rdf:type rdf:resource="https://w3id.org/fossr/ontology/limesurvey/Content"/>
+        <text>Your institution and your research group / project / institute:</text>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/fossr/data/test/Content_Q_Title -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/fossr/data/test/Content_Q_Title">
+        <rdf:type rdf:resource="https://w3id.org/fossr/ontology/limesurvey/Content"/>
+        <text>Your title (researcher, professor, doctoral student, post-doc...):</text>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/fossr/data/test/DefaultValue_Institution -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/fossr/data/test/DefaultValue_Institution">
+        <rdf:type rdf:resource="https://w3id.org/fossr/ontology/limesurvey/DefaultValue"/>
+        <defaultValueContent>University of Padova</defaultValueContent>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/fossr/data/test/GroupFlowStep_GFS1 -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/fossr/data/test/GroupFlowStep_GFS1">
+        <rdf:type rdf:resource="https://w3id.org/fossr/ontology/limesurvey/GroupFlowStep"/>
+        <hasComponentFlowNextStep rdf:resource="https://w3id.org/fossr/data/test/GroupFlowStep_GFS2"/>
+        <hasCondition rdf:resource="https://w3id.org/fossr/data/test/Relevance_Always"/>
+        <hasOrder rdf:resource="https://w3id.org/fossr/data/test/Order_1"/>
+        <hasQuestionGroup rdf:resource="https://w3id.org/fossr/data/test/QuestionGroup_Demographics"/>
+        <randomize rdf:datatype="http://www.w3.org/2001/XMLSchema#int">0</randomize>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/fossr/data/test/GroupFlowStep_GFS2 -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/fossr/data/test/GroupFlowStep_GFS2">
+        <rdf:type rdf:resource="https://w3id.org/fossr/ontology/limesurvey/GroupFlowStep"/>
+        <hasComponentFlowPreviusStep rdf:resource="https://w3id.org/fossr/data/test/GroupFlowStep_GFS1"/>
+        <hasCondition rdf:resource="https://w3id.org/fossr/data/test/Relevance_IfArchives"/>
+        <hasOrder rdf:resource="https://w3id.org/fossr/data/test/Order_2"/>
+        <hasQuestionGroup rdf:resource="https://w3id.org/fossr/data/test/QuestionGroup_Archiving"/>
+        <randomize rdf:datatype="http://www.w3.org/2001/XMLSchema#int">0</randomize>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/fossr/data/test/GroupFlowStep_GFS3 -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/fossr/data/test/GroupFlowStep_GFS3">
+        <rdf:type rdf:resource="https://w3id.org/fossr/ontology/limesurvey/GroupFlowStep"/>
+        <hasOrder rdf:resource="https://w3id.org/fossr/data/test/Order_1"/>
+        <hasQuestionGroup rdf:resource="https://w3id.org/fossr/data/test/QuestionGroup_Demographics"/>
+        <randomize rdf:datatype="http://www.w3.org/2001/XMLSchema#int">0</randomize>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/fossr/data/test/GroupFlowStep_GFS4 -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/fossr/data/test/GroupFlowStep_GFS4">
+        <rdf:type rdf:resource="https://w3id.org/fossr/ontology/limesurvey/GroupFlowStep"/>
+        <hasOrder rdf:resource="https://w3id.org/fossr/data/test/Order_1"/>
+        <hasQuestionGroup rdf:resource="https://w3id.org/fossr/data/test/QuestionGroup_Social"/>
+        <randomize rdf:datatype="http://www.w3.org/2001/XMLSchema#int">0</randomize>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/fossr/data/test/GroupFlow_ESS_Wave10 -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/fossr/data/test/GroupFlow_ESS_Wave10">
+        <rdf:type rdf:resource="https://w3id.org/fossr/ontology/limesurvey/GroupFlow"/>
+        <hasComponentFlowFirstStep rdf:resource="https://w3id.org/fossr/data/test/GroupFlowStep_GFS4"/>
+        <hasComponentFlowLastStep rdf:resource="https://w3id.org/fossr/data/test/GroupFlowStep_GFS4"/>
+        <hasComponentFlowStep rdf:resource="https://w3id.org/fossr/data/test/GroupFlowStep_GFS4"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/fossr/data/test/GroupFlow_SODA_2023 -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/fossr/data/test/GroupFlow_SODA_2023">
+        <rdf:type rdf:resource="https://w3id.org/fossr/ontology/limesurvey/GroupFlow"/>
+        <hasComponentFlowFirstStep rdf:resource="https://w3id.org/fossr/data/test/GroupFlowStep_GFS1"/>
+        <hasComponentFlowLastStep rdf:resource="https://w3id.org/fossr/data/test/GroupFlowStep_GFS2"/>
+        <hasComponentFlowStep rdf:resource="https://w3id.org/fossr/data/test/GroupFlowStep_GFS1"/>
+        <hasComponentFlowStep rdf:resource="https://w3id.org/fossr/data/test/GroupFlowStep_GFS2"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/fossr/data/test/GroupFlow_SODA_2024 -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/fossr/data/test/GroupFlow_SODA_2024">
+        <rdf:type rdf:resource="https://w3id.org/fossr/ontology/limesurvey/GroupFlow"/>
+        <hasComponentFlowFirstStep rdf:resource="https://w3id.org/fossr/data/test/GroupFlowStep_GFS3"/>
+        <hasComponentFlowLastStep rdf:resource="https://w3id.org/fossr/data/test/GroupFlowStep_GFS3"/>
+        <hasComponentFlowStep rdf:resource="https://w3id.org/fossr/data/test/GroupFlowStep_GFS3"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/fossr/data/test/Identifier_AO1 -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/fossr/data/test/Identifier_AO1">
+        <rdf:type rdf:resource="https://w3id.org/fossr/ontology/limesurvey/Identifier"/>
+        <id rdf:datatype="http://www.w3.org/2001/XMLSchema#int">101</id>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/fossr/data/test/Identifier_AO2 -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/fossr/data/test/Identifier_AO2">
+        <rdf:type rdf:resource="https://w3id.org/fossr/ontology/limesurvey/Identifier"/>
+        <id rdf:datatype="http://www.w3.org/2001/XMLSchema#int">102</id>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/fossr/data/test/Identifier_AO3 -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/fossr/data/test/Identifier_AO3">
+        <rdf:type rdf:resource="https://w3id.org/fossr/ontology/limesurvey/Identifier"/>
+        <id rdf:datatype="http://www.w3.org/2001/XMLSchema#int">103</id>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/fossr/data/test/Identifier_Q1 -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/fossr/data/test/Identifier_Q1">
+        <rdf:type rdf:resource="https://w3id.org/fossr/ontology/limesurvey/Identifier"/>
+        <id rdf:datatype="http://www.w3.org/2001/XMLSchema#int">10</id>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/fossr/data/test/Identifier_Q2 -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/fossr/data/test/Identifier_Q2">
+        <rdf:type rdf:resource="https://w3id.org/fossr/ontology/limesurvey/Identifier"/>
+        <id rdf:datatype="http://www.w3.org/2001/XMLSchema#int">11</id>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/fossr/data/test/Identifier_Q3 -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/fossr/data/test/Identifier_Q3">
+        <rdf:type rdf:resource="https://w3id.org/fossr/ontology/limesurvey/Identifier"/>
+        <id rdf:datatype="http://www.w3.org/2001/XMLSchema#int">12</id>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/fossr/data/test/Identifier_Q4 -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/fossr/data/test/Identifier_Q4">
+        <rdf:type rdf:resource="https://w3id.org/fossr/ontology/limesurvey/Identifier"/>
+        <id rdf:datatype="http://www.w3.org/2001/XMLSchema#int">13</id>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/fossr/data/test/Identifier_QG1 -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/fossr/data/test/Identifier_QG1">
+        <rdf:type rdf:resource="https://w3id.org/fossr/ontology/limesurvey/Identifier"/>
+        <id rdf:datatype="http://www.w3.org/2001/XMLSchema#int">1</id>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/fossr/data/test/Identifier_QG2 -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/fossr/data/test/Identifier_QG2">
+        <rdf:type rdf:resource="https://w3id.org/fossr/ontology/limesurvey/Identifier"/>
+        <id rdf:datatype="http://www.w3.org/2001/XMLSchema#int">2</id>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/fossr/data/test/Identifier_QG3 -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/fossr/data/test/Identifier_QG3">
+        <rdf:type rdf:resource="https://w3id.org/fossr/ontology/limesurvey/Identifier"/>
+        <id rdf:datatype="http://www.w3.org/2001/XMLSchema#int">3</id>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/fossr/data/test/Identifier_SV_ESS_Wave10 -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/fossr/data/test/Identifier_SV_ESS_Wave10">
+        <rdf:type rdf:resource="https://w3id.org/fossr/ontology/limesurvey/Identifier"/>
+        <id rdf:datatype="http://www.w3.org/2001/XMLSchema#int">200</id>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/fossr/data/test/Identifier_SV_SODA_2023 -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/fossr/data/test/Identifier_SV_SODA_2023">
+        <rdf:type rdf:resource="https://w3id.org/fossr/ontology/limesurvey/Identifier"/>
+        <id rdf:datatype="http://www.w3.org/2001/XMLSchema#int">100</id>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/fossr/data/test/Identifier_SV_SODA_2024 -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/fossr/data/test/Identifier_SV_SODA_2024">
+        <rdf:type rdf:resource="https://w3id.org/fossr/ontology/limesurvey/Identifier"/>
+        <id rdf:datatype="http://www.w3.org/2001/XMLSchema#int">101</id>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/fossr/data/test/Identifier_Survey_ESS -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/fossr/data/test/Identifier_Survey_ESS">
+        <rdf:type rdf:resource="https://w3id.org/fossr/ontology/limesurvey/Identifier"/>
+        <id rdf:datatype="http://www.w3.org/2001/XMLSchema#int">2</id>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/fossr/data/test/Identifier_Survey_SODA -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/fossr/data/test/Identifier_Survey_SODA">
+        <rdf:type rdf:resource="https://w3id.org/fossr/ontology/limesurvey/Identifier"/>
+        <id rdf:datatype="http://www.w3.org/2001/XMLSchema#int">1</id>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/fossr/data/test/Name_QG_Archiving -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/fossr/data/test/Name_QG_Archiving">
+        <rdf:type rdf:resource="https://w3id.org/fossr/ontology/limesurvey/Name"/>
+        <nameText>Archiving Research Data</nameText>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/fossr/data/test/Name_QG_Demographics -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/fossr/data/test/Name_QG_Demographics">
+        <rdf:type rdf:resource="https://w3id.org/fossr/ontology/limesurvey/Name"/>
+        <nameText>General Information</nameText>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/fossr/data/test/Name_QG_Social -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/fossr/data/test/Name_QG_Social">
+        <rdf:type rdf:resource="https://w3id.org/fossr/ontology/limesurvey/Name"/>
+        <nameText>Social Background</nameText>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/fossr/data/test/Order_1 -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/fossr/data/test/Order_1">
+        <rdf:type rdf:resource="https://w3id.org/fossr/ontology/limesurvey/Order"/>
+        <order rdf:datatype="http://www.w3.org/2001/XMLSchema#int">1</order>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/fossr/data/test/Order_2 -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/fossr/data/test/Order_2">
+        <rdf:type rdf:resource="https://w3id.org/fossr/ontology/limesurvey/Order"/>
+        <order rdf:datatype="http://www.w3.org/2001/XMLSchema#int">2</order>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/fossr/data/test/Order_3 -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/fossr/data/test/Order_3">
+        <rdf:type rdf:resource="https://w3id.org/fossr/ontology/limesurvey/Order"/>
+        <order rdf:datatype="http://www.w3.org/2001/XMLSchema#int">3</order>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/fossr/data/test/QuestionAttribute_Age -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/fossr/data/test/QuestionAttribute_Age">
+        <rdf:type rdf:resource="https://w3id.org/fossr/ontology/limesurvey/QuestionAttribute"/>
+        <attributeRandomGroup>groupA</attributeRandomGroup>
+        <attributeTimeLimit rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">60</attributeTimeLimit>
+        <attributeTimeLimitAction rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</attributeTimeLimitAction>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/fossr/data/test/QuestionFlow_Archiving -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/fossr/data/test/QuestionFlow_Archiving">
+        <rdf:type rdf:resource="https://w3id.org/fossr/ontology/limesurvey/QuestionFlow"/>
+        <hasFirstQuestionStep rdf:resource="https://w3id.org/fossr/data/test/QuestionStep_QS3"/>
+        <hasLastQuestionStep rdf:resource="https://w3id.org/fossr/data/test/QuestionStep_QS3"/>
+        <hasQuestionStep rdf:resource="https://w3id.org/fossr/data/test/QuestionStep_QS3"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/fossr/data/test/QuestionFlow_Demographics -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/fossr/data/test/QuestionFlow_Demographics">
+        <rdf:type rdf:resource="https://w3id.org/fossr/ontology/limesurvey/QuestionFlow"/>
+        <hasFirstQuestionStep rdf:resource="https://w3id.org/fossr/data/test/QuestionStep_QS1"/>
+        <hasLastQuestionStep rdf:resource="https://w3id.org/fossr/data/test/QuestionStep_QS2"/>
+        <hasQuestionStep rdf:resource="https://w3id.org/fossr/data/test/QuestionStep_QS1"/>
+        <hasQuestionStep rdf:resource="https://w3id.org/fossr/data/test/QuestionStep_QS2"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/fossr/data/test/QuestionGroup_Archiving -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/fossr/data/test/QuestionGroup_Archiving">
+        <rdf:type rdf:resource="https://w3id.org/fossr/ontology/limesurvey/QuestionGroup"/>
+        <hasComponentAttribute rdf:resource="https://w3id.org/fossr/data/test/Attr_QG_Archiving_relevance"/>
+        <hasContent rdf:resource="https://w3id.org/fossr/data/test/Content_QG_Archiving"/>
+        <hasId rdf:resource="https://w3id.org/fossr/data/test/Identifier_QG2"/>
+        <hasName rdf:resource="https://w3id.org/fossr/data/test/Name_QG_Archiving"/>
+        <hasQuestion rdf:resource="https://w3id.org/fossr/data/test/Question_Archive"/>
+        <hasQuestionFlow rdf:resource="https://w3id.org/fossr/data/test/QuestionFlow_Archiving"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/fossr/data/test/QuestionGroup_Demographics -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/fossr/data/test/QuestionGroup_Demographics">
+        <rdf:type rdf:resource="https://w3id.org/fossr/ontology/limesurvey/QuestionGroup"/>
+        <hasComponentAttribute rdf:resource="https://w3id.org/fossr/data/test/Attr_QG_Demographics_mandatory"/>
+        <hasContent rdf:resource="https://w3id.org/fossr/data/test/Content_QG_Demographics"/>
+        <hasId rdf:resource="https://w3id.org/fossr/data/test/Identifier_QG1"/>
+        <hasName rdf:resource="https://w3id.org/fossr/data/test/Name_QG_Demographics"/>
+        <hasQuestion rdf:resource="https://w3id.org/fossr/data/test/Question_Institution"/>
+        <hasQuestion rdf:resource="https://w3id.org/fossr/data/test/Question_Title"/>
+        <hasQuestionFlow rdf:resource="https://w3id.org/fossr/data/test/QuestionFlow_Demographics"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/fossr/data/test/QuestionGroup_Social -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/fossr/data/test/QuestionGroup_Social">
+        <rdf:type rdf:resource="https://w3id.org/fossr/ontology/limesurvey/QuestionGroup"/>
+        <hasContent rdf:resource="https://w3id.org/fossr/data/test/Content_QG_Social"/>
+        <hasId rdf:resource="https://w3id.org/fossr/data/test/Identifier_QG3"/>
+        <hasName rdf:resource="https://w3id.org/fossr/data/test/Name_QG_Social"/>
+        <hasQuestion rdf:resource="https://w3id.org/fossr/data/test/Question_Age"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/fossr/data/test/QuestionStep_QS1 -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/fossr/data/test/QuestionStep_QS1">
+        <rdf:type rdf:resource="https://w3id.org/fossr/ontology/limesurvey/QuestionStep"/>
+        <hasCondition rdf:resource="https://w3id.org/fossr/data/test/Relevance_Always"/>
+        <hasNextQuestionStep rdf:resource="https://w3id.org/fossr/data/test/QuestionStep_QS2"/>
+        <hasOrder rdf:resource="https://w3id.org/fossr/data/test/Order_1"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/fossr/data/test/QuestionStep_QS2 -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/fossr/data/test/QuestionStep_QS2">
+        <rdf:type rdf:resource="https://w3id.org/fossr/ontology/limesurvey/QuestionStep"/>
+        <hasCondition rdf:resource="https://w3id.org/fossr/data/test/Relevance_Always"/>
+        <hasOrder rdf:resource="https://w3id.org/fossr/data/test/Order_2"/>
+        <hasPreviusQuestionStep rdf:resource="https://w3id.org/fossr/data/test/QuestionStep_QS1"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/fossr/data/test/QuestionStep_QS3 -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/fossr/data/test/QuestionStep_QS3">
+        <rdf:type rdf:resource="https://w3id.org/fossr/ontology/limesurvey/QuestionStep"/>
+        <hasOrder rdf:resource="https://w3id.org/fossr/data/test/Order_1"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/fossr/data/test/QuestionType_L -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/fossr/data/test/QuestionType_L">
+        <rdf:type rdf:resource="https://w3id.org/fossr/ontology/limesurvey/QuestionType"/>
+        <componentValue>L</componentValue>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/fossr/data/test/QuestionType_N -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/fossr/data/test/QuestionType_N">
+        <rdf:type rdf:resource="https://w3id.org/fossr/ontology/limesurvey/QuestionType"/>
+        <componentValue>N</componentValue>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/fossr/data/test/QuestionType_S -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/fossr/data/test/QuestionType_S">
+        <rdf:type rdf:resource="https://w3id.org/fossr/ontology/limesurvey/QuestionType"/>
+        <componentValue>S</componentValue>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/fossr/data/test/Question_Age -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/fossr/data/test/Question_Age">
+        <rdf:type rdf:resource="https://w3id.org/fossr/ontology/limesurvey/Question"/>
+        <hasAttribute rdf:resource="https://w3id.org/fossr/data/test/QuestionAttribute_Age"/>
+        <hasContent rdf:resource="https://w3id.org/fossr/data/test/Content_Q_Age"/>
+        <hasGroup rdf:resource="https://w3id.org/fossr/data/test/QuestionGroup_Social"/>
+        <hasId rdf:resource="https://w3id.org/fossr/data/test/Identifier_Q4"/>
+        <hasType rdf:resource="https://w3id.org/fossr/data/test/QuestionType_N"/>
+        <hasVariable rdf:resource="https://w3id.org/fossr/data/test/Variable_AGE"/>
+        <isEncrypted rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</isEncrypted>
+        <isMandatory rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</isMandatory>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/fossr/data/test/Question_Archive -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/fossr/data/test/Question_Archive">
+        <rdf:type rdf:resource="https://w3id.org/fossr/ontology/limesurvey/Question"/>
+        <hasAnswerOption rdf:resource="https://w3id.org/fossr/data/test/AnswerOption_Always"/>
+        <hasAnswerOption rdf:resource="https://w3id.org/fossr/data/test/AnswerOption_Never"/>
+        <hasAnswerOption rdf:resource="https://w3id.org/fossr/data/test/AnswerOption_Sometimes"/>
+        <hasComponentAttribute rdf:resource="https://w3id.org/fossr/data/test/Attr_Q_Archive_order"/>
+        <hasContent rdf:resource="https://w3id.org/fossr/data/test/Content_Q_Archive"/>
+        <hasGroup rdf:resource="https://w3id.org/fossr/data/test/QuestionGroup_Archiving"/>
+        <hasId rdf:resource="https://w3id.org/fossr/data/test/Identifier_Q3"/>
+        <hasSubquestion rdf:resource="https://w3id.org/fossr/data/test/Subquestion_Archive_Who"/>
+        <hasType rdf:resource="https://w3id.org/fossr/data/test/QuestionType_L"/>
+        <hasVariable rdf:resource="https://w3id.org/fossr/data/test/Variable_ARCHIVE"/>
+        <isEncrypted rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</isEncrypted>
+        <isMandatory rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</isMandatory>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/fossr/data/test/Question_Institution -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/fossr/data/test/Question_Institution">
+        <rdf:type rdf:resource="https://w3id.org/fossr/ontology/limesurvey/Question"/>
+        <hasComponentAttribute rdf:resource="https://w3id.org/fossr/data/test/Attr_Q_Institution_order"/>
+        <hasContent rdf:resource="https://w3id.org/fossr/data/test/Content_Q_Institution"/>
+        <hasDefaultValue rdf:resource="https://w3id.org/fossr/data/test/DefaultValue_Institution"/>
+        <hasGroup rdf:resource="https://w3id.org/fossr/data/test/QuestionGroup_Demographics"/>
+        <hasId rdf:resource="https://w3id.org/fossr/data/test/Identifier_Q2"/>
+        <hasType rdf:resource="https://w3id.org/fossr/data/test/QuestionType_S"/>
+        <hasVariable rdf:resource="https://w3id.org/fossr/data/test/Variable_INSTITUTION"/>
+        <isEncrypted rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</isEncrypted>
+        <isMandatory rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</isMandatory>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/fossr/data/test/Question_Title -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/fossr/data/test/Question_Title">
+        <rdf:type rdf:resource="https://w3id.org/fossr/ontology/limesurvey/Question"/>
+        <hasComponentAttribute rdf:resource="https://w3id.org/fossr/data/test/Attr_Q_Title_order"/>
+        <hasContent rdf:resource="https://w3id.org/fossr/data/test/Content_Q_Title"/>
+        <hasGroup rdf:resource="https://w3id.org/fossr/data/test/QuestionGroup_Demographics"/>
+        <hasId rdf:resource="https://w3id.org/fossr/data/test/Identifier_Q1"/>
+        <hasType rdf:resource="https://w3id.org/fossr/data/test/QuestionType_S"/>
+        <hasVariable rdf:resource="https://w3id.org/fossr/data/test/Variable_TITLE"/>
+        <isEncrypted rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</isEncrypted>
+        <isMandatory rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</isMandatory>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/fossr/data/test/RecurrentTimePeriod_Annual -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/fossr/data/test/RecurrentTimePeriod_Annual">
+        <rdf:type rdf:resource="https://w3id.org/fossr/ontology/limesurvey/RecurrentTimePeriod"/>
+        <rdfs:label>Annual</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/fossr/data/test/RecurrentTimePeriod_Biennial -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/fossr/data/test/RecurrentTimePeriod_Biennial">
+        <rdf:type rdf:resource="https://w3id.org/fossr/ontology/limesurvey/RecurrentTimePeriod"/>
+        <rdfs:label>Biennial</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/fossr/data/test/Relevance_Always -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/fossr/data/test/Relevance_Always">
+        <rdf:type rdf:resource="https://w3id.org/fossr/ontology/limesurvey/Relevance"/>
+        <relevance>1</relevance>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/fossr/data/test/Relevance_IfArchives -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/fossr/data/test/Relevance_IfArchives">
+        <rdf:type rdf:resource="https://w3id.org/fossr/ontology/limesurvey/Relevance"/>
+        <relevance>ARCHIVE == &apos;Y&apos;</relevance>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/fossr/data/test/Study_ESS -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/fossr/data/test/Study_ESS">
+        <rdf:type rdf:resource="https://w3id.org/fossr/ontology/limesurvey/Study"/>
+        <hasInstrument rdf:resource="https://w3id.org/fossr/data/test/Survey_ESS"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/fossr/data/test/Study_SODA -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/fossr/data/test/Study_SODA">
+        <rdf:type rdf:resource="https://w3id.org/fossr/ontology/limesurvey/Study"/>
+        <hasInstrument rdf:resource="https://w3id.org/fossr/data/test/Survey_SODA"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/fossr/data/test/Subquestion_Archive_Who -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/fossr/data/test/Subquestion_Archive_Who">
+        <rdf:type rdf:resource="https://w3id.org/fossr/ontology/limesurvey/Subquestion"/>
+        <hasSubAttribute rdf:resource="https://w3id.org/fossr/data/test/Attr_Subq_Who_label"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/fossr/data/test/SurveyVersion_ESS_Wave10 -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/fossr/data/test/SurveyVersion_ESS_Wave10">
+        <rdf:type rdf:resource="https://w3id.org/fossr/ontology/limesurvey/SurveyVersion"/>
+        <hasGroupFlow rdf:resource="https://w3id.org/fossr/data/test/GroupFlow_ESS_Wave10"/>
+        <hasIntervalValidity rdf:resource="https://w3id.org/fossr/data/test/TimeInterval_ESS_Wave10"/>
+        <hasSurveyId rdf:resource="https://w3id.org/fossr/data/test/Identifier_SV_ESS_Wave10"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/fossr/data/test/SurveyVersion_SODA_2023 -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/fossr/data/test/SurveyVersion_SODA_2023">
+        <rdf:type rdf:resource="https://w3id.org/fossr/ontology/limesurvey/SurveyVersion"/>
+        <hasGroupFlow rdf:resource="https://w3id.org/fossr/data/test/GroupFlow_SODA_2023"/>
+        <hasIntervalValidity rdf:resource="https://w3id.org/fossr/data/test/TimeInterval_SODA_2023"/>
+        <hasSurveyId rdf:resource="https://w3id.org/fossr/data/test/Identifier_SV_SODA_2023"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/fossr/data/test/SurveyVersion_SODA_2024 -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/fossr/data/test/SurveyVersion_SODA_2024">
+        <rdf:type rdf:resource="https://w3id.org/fossr/ontology/limesurvey/SurveyVersion"/>
+        <derivedFrom rdf:resource="https://w3id.org/fossr/data/test/SurveyVersion_SODA_2023"/>
+        <hasGroupFlow rdf:resource="https://w3id.org/fossr/data/test/GroupFlow_SODA_2024"/>
+        <hasIntervalValidity rdf:resource="https://w3id.org/fossr/data/test/TimeInterval_SODA_2024"/>
+        <hasSurveyId rdf:resource="https://w3id.org/fossr/data/test/Identifier_SV_SODA_2024"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/fossr/data/test/Survey_ESS -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/fossr/data/test/Survey_ESS">
+        <rdf:type rdf:resource="https://w3id.org/fossr/ontology/limesurvey/Survey"/>
+        <hasRecurrentTimePeriod rdf:resource="https://w3id.org/fossr/data/test/RecurrentTimePeriod_Biennial"/>
+        <hasSurveyId rdf:resource="https://w3id.org/fossr/data/test/Identifier_Survey_ESS"/>
+        <hasSurveyVersion rdf:resource="https://w3id.org/fossr/data/test/SurveyVersion_ESS_Wave10"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/fossr/data/test/Survey_SODA -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/fossr/data/test/Survey_SODA">
+        <rdf:type rdf:resource="https://w3id.org/fossr/ontology/limesurvey/Survey"/>
+        <hasRecurrentTimePeriod rdf:resource="https://w3id.org/fossr/data/test/RecurrentTimePeriod_Annual"/>
+        <hasSurveyId rdf:resource="https://w3id.org/fossr/data/test/Identifier_Survey_SODA"/>
+        <hasSurveyVersion rdf:resource="https://w3id.org/fossr/data/test/SurveyVersion_SODA_2023"/>
+        <hasSurveyVersion rdf:resource="https://w3id.org/fossr/data/test/SurveyVersion_SODA_2024"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/fossr/data/test/TimeInterval_ESS_Wave10 -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/fossr/data/test/TimeInterval_ESS_Wave10">
+        <rdf:type rdf:resource="https://w3id.org/fossr/ontology/limesurvey/TimeInterval"/>
+        <endTime rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2022-06-30T23:59:59</endTime>
+        <startTime rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2020-09-01T00:00:00</startTime>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/fossr/data/test/TimeInterval_SODA_2023 -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/fossr/data/test/TimeInterval_SODA_2023">
+        <rdf:type rdf:resource="https://w3id.org/fossr/ontology/limesurvey/TimeInterval"/>
+        <endTime rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2023-12-31T23:59:59</endTime>
+        <startTime rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2023-01-01T00:00:00</startTime>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/fossr/data/test/TimeInterval_SODA_2024 -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/fossr/data/test/TimeInterval_SODA_2024">
+        <rdf:type rdf:resource="https://w3id.org/fossr/ontology/limesurvey/TimeInterval"/>
+        <endTime rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2024-12-31T23:59:59</endTime>
+        <startTime rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2024-01-01T00:00:00</startTime>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/fossr/data/test/Variable_AGE -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/fossr/data/test/Variable_AGE">
+        <rdf:type rdf:resource="https://w3id.org/fossr/ontology/limesurvey/Variable"/>
+        <variableCod>AGE</variableCod>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/fossr/data/test/Variable_ARCHIVE -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/fossr/data/test/Variable_ARCHIVE">
+        <rdf:type rdf:resource="https://w3id.org/fossr/ontology/limesurvey/Variable"/>
+        <variableCod>ARCHIVE</variableCod>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/fossr/data/test/Variable_INSTITUTION -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/fossr/data/test/Variable_INSTITUTION">
+        <rdf:type rdf:resource="https://w3id.org/fossr/ontology/limesurvey/Variable"/>
+        <variableCod>INSTITUTION</variableCod>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/fossr/data/test/Variable_TITLE -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/fossr/data/test/Variable_TITLE">
+        <rdf:type rdf:resource="https://w3id.org/fossr/ontology/limesurvey/Variable"/>
+        <variableCod>TITLE</variableCod>
+    </owl:NamedIndividual>
 </rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.29.2024-05-13T12:11:03Z) https://github.com/owlcs/owlapi -->
+
