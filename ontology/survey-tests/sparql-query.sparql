@@ -1,1338 +1,362 @@
-[ {
-  "@id" : "_:genid1",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Ontology" ]
-}, {
-  "@id" : "https://w3id.org/fossr/data/test/AnswerOption_Always",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
-  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "https://w3id.org/fossr/ontology/limesurvey/AnswerOption"
-  } ],
-  "https://w3id.org/fossr/ontology/limesurvey/answerOrder" : [ {
-    "@type" : "http://www.w3.org/2001/XMLSchema#integer",
-    "@value" : "1"
-  } ],
-  "https://w3id.org/fossr/ontology/limesurvey/answerScaleId" : [ {
-    "@type" : "http://www.w3.org/2001/XMLSchema#integer",
-    "@value" : "0"
-  } ],
-  "https://w3id.org/fossr/ontology/limesurvey/answerText" : [ {
-    "@value" : "Always"
-  } ],
-  "https://w3id.org/fossr/ontology/limesurvey/assessmentValue" : [ {
-    "@type" : "http://www.w3.org/2001/XMLSchema#integer",
-    "@value" : "1"
-  } ],
-  "https://w3id.org/fossr/ontology/limesurvey/componentValue" : [ {
-    "@value" : "A1"
-  } ],
-  "https://w3id.org/fossr/ontology/limesurvey/hasId" : [ {
-    "@id" : "https://w3id.org/fossr/data/test/Identifier_AO1"
-  } ]
-}, {
-  "@id" : "https://w3id.org/fossr/data/test/AnswerOption_Never",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
-  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "https://w3id.org/fossr/ontology/limesurvey/AnswerOption"
-  } ],
-  "https://w3id.org/fossr/ontology/limesurvey/answerOrder" : [ {
-    "@type" : "http://www.w3.org/2001/XMLSchema#integer",
-    "@value" : "3"
-  } ],
-  "https://w3id.org/fossr/ontology/limesurvey/answerScaleId" : [ {
-    "@type" : "http://www.w3.org/2001/XMLSchema#integer",
-    "@value" : "0"
-  } ],
-  "https://w3id.org/fossr/ontology/limesurvey/answerText" : [ {
-    "@value" : "Never"
-  } ],
-  "https://w3id.org/fossr/ontology/limesurvey/assessmentValue" : [ {
-    "@type" : "http://www.w3.org/2001/XMLSchema#integer",
-    "@value" : "-1"
-  } ],
-  "https://w3id.org/fossr/ontology/limesurvey/componentValue" : [ {
-    "@value" : "A3"
-  } ],
-  "https://w3id.org/fossr/ontology/limesurvey/hasId" : [ {
-    "@id" : "https://w3id.org/fossr/data/test/Identifier_AO3"
-  } ]
-}, {
-  "@id" : "https://w3id.org/fossr/data/test/AnswerOption_Sometimes",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
-  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "https://w3id.org/fossr/ontology/limesurvey/AnswerOption"
-  } ],
-  "https://w3id.org/fossr/ontology/limesurvey/answerOrder" : [ {
-    "@type" : "http://www.w3.org/2001/XMLSchema#integer",
-    "@value" : "2"
-  } ],
-  "https://w3id.org/fossr/ontology/limesurvey/answerScaleId" : [ {
-    "@type" : "http://www.w3.org/2001/XMLSchema#integer",
-    "@value" : "0"
-  } ],
-  "https://w3id.org/fossr/ontology/limesurvey/answerText" : [ {
-    "@value" : "Sometimes"
-  } ],
-  "https://w3id.org/fossr/ontology/limesurvey/assessmentValue" : [ {
-    "@type" : "http://www.w3.org/2001/XMLSchema#integer",
-    "@value" : "0"
-  } ],
-  "https://w3id.org/fossr/ontology/limesurvey/componentValue" : [ {
-    "@value" : "A2"
-  } ],
-  "https://w3id.org/fossr/ontology/limesurvey/hasId" : [ {
-    "@id" : "https://w3id.org/fossr/data/test/Identifier_AO2"
-  } ]
-}, {
-  "@id" : "https://w3id.org/fossr/data/test/Attr_QG_Archiving_relevance",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
-  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "https://w3id.org/fossr/ontology/limesurvey/ComponentAttribute"
-  } ],
-  "https://w3id.org/fossr/ontology/limesurvey/componentName" : [ {
-    "@value" : "relevance"
-  } ],
-  "https://w3id.org/fossr/ontology/limesurvey/componentValue" : [ {
-    "@value" : "1"
-  } ]
-}, {
-  "@id" : "https://w3id.org/fossr/data/test/Attr_QG_Demographics_mandatory",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
-  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "https://w3id.org/fossr/ontology/limesurvey/ComponentAttribute"
-  } ],
-  "https://w3id.org/fossr/ontology/limesurvey/componentName" : [ {
-    "@value" : "mandatory"
-  } ],
-  "https://w3id.org/fossr/ontology/limesurvey/componentValue" : [ {
-    "@value" : "N"
-  } ]
-}, {
-  "@id" : "https://w3id.org/fossr/data/test/Attr_Q_Archive_order",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
-  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "https://w3id.org/fossr/ontology/limesurvey/ComponentAttribute"
-  } ],
-  "https://w3id.org/fossr/ontology/limesurvey/componentName" : [ {
-    "@value" : "question_order"
-  } ],
-  "https://w3id.org/fossr/ontology/limesurvey/componentValue" : [ {
-    "@value" : "3"
-  } ]
-}, {
-  "@id" : "https://w3id.org/fossr/data/test/Attr_Q_Institution_order",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
-  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "https://w3id.org/fossr/ontology/limesurvey/ComponentAttribute"
-  } ],
-  "https://w3id.org/fossr/ontology/limesurvey/componentName" : [ {
-    "@value" : "question_order"
-  } ],
-  "https://w3id.org/fossr/ontology/limesurvey/componentValue" : [ {
-    "@value" : "2"
-  } ]
-}, {
-  "@id" : "https://w3id.org/fossr/data/test/Attr_Q_Title_order",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
-  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "https://w3id.org/fossr/ontology/limesurvey/ComponentAttribute"
-  } ],
-  "https://w3id.org/fossr/ontology/limesurvey/componentName" : [ {
-    "@value" : "question_order"
-  } ],
-  "https://w3id.org/fossr/ontology/limesurvey/componentValue" : [ {
-    "@value" : "1"
-  } ]
-}, {
-  "@id" : "https://w3id.org/fossr/data/test/Attr_Subq_Who_label",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
-  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "https://w3id.org/fossr/ontology/limesurvey/ComponentAttribute"
-  } ],
-  "https://w3id.org/fossr/ontology/limesurvey/componentName" : [ {
-    "@value" : "other_replace_word"
-  } ],
-  "https://w3id.org/fossr/ontology/limesurvey/componentValue" : [ {
-    "@value" : "Who?"
-  } ]
-}, {
-  "@id" : "https://w3id.org/fossr/data/test/Content_QG_Archiving",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
-  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "https://w3id.org/fossr/ontology/limesurvey/Content"
-  } ],
-  "https://w3id.org/fossr/ontology/limesurvey/text" : [ {
-    "@value" : "This section covers practices regarding archiving research data."
-  } ]
-}, {
-  "@id" : "https://w3id.org/fossr/data/test/Content_QG_Demographics",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
-  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "https://w3id.org/fossr/ontology/limesurvey/Content"
-  } ],
-  "https://w3id.org/fossr/ontology/limesurvey/text" : [ {
-    "@value" : "This section collects general information about the respondent."
-  } ]
-}, {
-  "@id" : "https://w3id.org/fossr/data/test/Content_QG_Social",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
-  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "https://w3id.org/fossr/ontology/limesurvey/Content"
-  } ],
-  "https://w3id.org/fossr/ontology/limesurvey/text" : [ {
-    "@value" : "This section collects social background information."
-  } ]
-}, {
-  "@id" : "https://w3id.org/fossr/data/test/Content_Q_Age",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
-  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "https://w3id.org/fossr/ontology/limesurvey/Content"
-  } ],
-  "https://w3id.org/fossr/ontology/limesurvey/text" : [ {
-    "@value" : "What is your age?"
-  } ]
-}, {
-  "@id" : "https://w3id.org/fossr/data/test/Content_Q_Archive",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
-  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "https://w3id.org/fossr/ontology/limesurvey/Content"
-  } ],
-  "https://w3id.org/fossr/ontology/limesurvey/text" : [ {
-    "@value" : "Do you archive your research data?"
-  } ]
-}, {
-  "@id" : "https://w3id.org/fossr/data/test/Content_Q_Institution",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
-  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "https://w3id.org/fossr/ontology/limesurvey/Content"
-  } ],
-  "https://w3id.org/fossr/ontology/limesurvey/text" : [ {
-    "@value" : "Your institution and your research group / project / institute:"
-  } ]
-}, {
-  "@id" : "https://w3id.org/fossr/data/test/Content_Q_Title",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
-  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "https://w3id.org/fossr/ontology/limesurvey/Content"
-  } ],
-  "https://w3id.org/fossr/ontology/limesurvey/text" : [ {
-    "@value" : "Your title (researcher, professor, doctoral student, post-doc...):"
-  } ]
-}, {
-  "@id" : "https://w3id.org/fossr/data/test/DefaultValue_Institution",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
-  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "https://w3id.org/fossr/ontology/limesurvey/DefaultValue"
-  } ],
-  "https://w3id.org/fossr/ontology/limesurvey/defaultValueContent" : [ {
-    "@value" : "University of Padova"
-  } ]
-}, {
-  "@id" : "https://w3id.org/fossr/data/test/GroupFlowStep_GFS1",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
-  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "https://w3id.org/fossr/ontology/limesurvey/GroupFlowStep"
-  } ],
-  "https://w3id.org/fossr/ontology/limesurvey/hasComponentFlowNextStep" : [ {
-    "@id" : "https://w3id.org/fossr/data/test/GroupFlowStep_GFS2"
-  } ],
-  "https://w3id.org/fossr/ontology/limesurvey/hasCondition" : [ {
-    "@id" : "https://w3id.org/fossr/data/test/Relevance_Always"
-  } ],
-  "https://w3id.org/fossr/ontology/limesurvey/hasOrder" : [ {
-    "@id" : "https://w3id.org/fossr/data/test/Order_1"
-  } ],
-  "https://w3id.org/fossr/ontology/limesurvey/hasQuestionGroup" : [ {
-    "@id" : "https://w3id.org/fossr/data/test/QuestionGroup_Demographics"
-  } ],
-  "https://w3id.org/fossr/ontology/limesurvey/randomize" : [ {
-    "@type" : "http://www.w3.org/2001/XMLSchema#int",
-    "@value" : "0"
-  } ]
-}, {
-  "@id" : "https://w3id.org/fossr/data/test/GroupFlowStep_GFS2",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
-  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "https://w3id.org/fossr/ontology/limesurvey/GroupFlowStep"
-  } ],
-  "https://w3id.org/fossr/ontology/limesurvey/hasComponentFlowPreviusStep" : [ {
-    "@id" : "https://w3id.org/fossr/data/test/GroupFlowStep_GFS1"
-  } ],
-  "https://w3id.org/fossr/ontology/limesurvey/hasCondition" : [ {
-    "@id" : "https://w3id.org/fossr/data/test/Relevance_IfArchives"
-  } ],
-  "https://w3id.org/fossr/ontology/limesurvey/hasOrder" : [ {
-    "@id" : "https://w3id.org/fossr/data/test/Order_2"
-  } ],
-  "https://w3id.org/fossr/ontology/limesurvey/hasQuestionGroup" : [ {
-    "@id" : "https://w3id.org/fossr/data/test/QuestionGroup_Archiving"
-  } ],
-  "https://w3id.org/fossr/ontology/limesurvey/randomize" : [ {
-    "@type" : "http://www.w3.org/2001/XMLSchema#int",
-    "@value" : "0"
-  } ]
-}, {
-  "@id" : "https://w3id.org/fossr/data/test/GroupFlowStep_GFS3",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
-  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "https://w3id.org/fossr/ontology/limesurvey/GroupFlowStep"
-  } ],
-  "https://w3id.org/fossr/ontology/limesurvey/hasOrder" : [ {
-    "@id" : "https://w3id.org/fossr/data/test/Order_1"
-  } ],
-  "https://w3id.org/fossr/ontology/limesurvey/hasQuestionGroup" : [ {
-    "@id" : "https://w3id.org/fossr/data/test/QuestionGroup_Demographics"
-  } ],
-  "https://w3id.org/fossr/ontology/limesurvey/randomize" : [ {
-    "@type" : "http://www.w3.org/2001/XMLSchema#int",
-    "@value" : "0"
-  } ]
-}, {
-  "@id" : "https://w3id.org/fossr/data/test/GroupFlowStep_GFS4",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
-  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "https://w3id.org/fossr/ontology/limesurvey/GroupFlowStep"
-  } ],
-  "https://w3id.org/fossr/ontology/limesurvey/hasOrder" : [ {
-    "@id" : "https://w3id.org/fossr/data/test/Order_1"
-  } ],
-  "https://w3id.org/fossr/ontology/limesurvey/hasQuestionGroup" : [ {
-    "@id" : "https://w3id.org/fossr/data/test/QuestionGroup_Social"
-  } ],
-  "https://w3id.org/fossr/ontology/limesurvey/randomize" : [ {
-    "@type" : "http://www.w3.org/2001/XMLSchema#int",
-    "@value" : "0"
-  } ]
-}, {
-  "@id" : "https://w3id.org/fossr/data/test/GroupFlow_ESS_Wave10",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
-  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "https://w3id.org/fossr/ontology/limesurvey/GroupFlow"
-  } ],
-  "https://w3id.org/fossr/ontology/limesurvey/hasComponentFlowFirstStep" : [ {
-    "@id" : "https://w3id.org/fossr/data/test/GroupFlowStep_GFS4"
-  } ],
-  "https://w3id.org/fossr/ontology/limesurvey/hasComponentFlowLastStep" : [ {
-    "@id" : "https://w3id.org/fossr/data/test/GroupFlowStep_GFS4"
-  } ],
-  "https://w3id.org/fossr/ontology/limesurvey/hasComponentFlowStep" : [ {
-    "@id" : "https://w3id.org/fossr/data/test/GroupFlowStep_GFS4"
-  } ]
-}, {
-  "@id" : "https://w3id.org/fossr/data/test/GroupFlow_SODA_2023",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
-  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "https://w3id.org/fossr/ontology/limesurvey/GroupFlow"
-  } ],
-  "https://w3id.org/fossr/ontology/limesurvey/hasComponentFlowFirstStep" : [ {
-    "@id" : "https://w3id.org/fossr/data/test/GroupFlowStep_GFS1"
-  } ],
-  "https://w3id.org/fossr/ontology/limesurvey/hasComponentFlowLastStep" : [ {
-    "@id" : "https://w3id.org/fossr/data/test/GroupFlowStep_GFS2"
-  } ],
-  "https://w3id.org/fossr/ontology/limesurvey/hasComponentFlowStep" : [ {
-    "@id" : "https://w3id.org/fossr/data/test/GroupFlowStep_GFS1"
-  }, {
-    "@id" : "https://w3id.org/fossr/data/test/GroupFlowStep_GFS2"
-  } ]
-}, {
-  "@id" : "https://w3id.org/fossr/data/test/GroupFlow_SODA_2024",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
-  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "https://w3id.org/fossr/ontology/limesurvey/GroupFlow"
-  } ],
-  "https://w3id.org/fossr/ontology/limesurvey/hasComponentFlowFirstStep" : [ {
-    "@id" : "https://w3id.org/fossr/data/test/GroupFlowStep_GFS3"
-  } ],
-  "https://w3id.org/fossr/ontology/limesurvey/hasComponentFlowLastStep" : [ {
-    "@id" : "https://w3id.org/fossr/data/test/GroupFlowStep_GFS3"
-  } ],
-  "https://w3id.org/fossr/ontology/limesurvey/hasComponentFlowStep" : [ {
-    "@id" : "https://w3id.org/fossr/data/test/GroupFlowStep_GFS3"
-  } ]
-}, {
-  "@id" : "https://w3id.org/fossr/data/test/Identifier_AO1",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
-  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "https://w3id.org/fossr/ontology/limesurvey/Identifier"
-  } ],
-  "https://w3id.org/fossr/ontology/limesurvey/id" : [ {
-    "@type" : "http://www.w3.org/2001/XMLSchema#int",
-    "@value" : "101"
-  } ]
-}, {
-  "@id" : "https://w3id.org/fossr/data/test/Identifier_AO2",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
-  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "https://w3id.org/fossr/ontology/limesurvey/Identifier"
-  } ],
-  "https://w3id.org/fossr/ontology/limesurvey/id" : [ {
-    "@type" : "http://www.w3.org/2001/XMLSchema#int",
-    "@value" : "102"
-  } ]
-}, {
-  "@id" : "https://w3id.org/fossr/data/test/Identifier_AO3",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
-  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "https://w3id.org/fossr/ontology/limesurvey/Identifier"
-  } ],
-  "https://w3id.org/fossr/ontology/limesurvey/id" : [ {
-    "@type" : "http://www.w3.org/2001/XMLSchema#int",
-    "@value" : "103"
-  } ]
-}, {
-  "@id" : "https://w3id.org/fossr/data/test/Identifier_Q1",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
-  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "https://w3id.org/fossr/ontology/limesurvey/Identifier"
-  } ],
-  "https://w3id.org/fossr/ontology/limesurvey/id" : [ {
-    "@type" : "http://www.w3.org/2001/XMLSchema#int",
-    "@value" : "10"
-  } ]
-}, {
-  "@id" : "https://w3id.org/fossr/data/test/Identifier_Q2",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
-  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "https://w3id.org/fossr/ontology/limesurvey/Identifier"
-  } ],
-  "https://w3id.org/fossr/ontology/limesurvey/id" : [ {
-    "@type" : "http://www.w3.org/2001/XMLSchema#int",
-    "@value" : "11"
-  } ]
-}, {
-  "@id" : "https://w3id.org/fossr/data/test/Identifier_Q3",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
-  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "https://w3id.org/fossr/ontology/limesurvey/Identifier"
-  } ],
-  "https://w3id.org/fossr/ontology/limesurvey/id" : [ {
-    "@type" : "http://www.w3.org/2001/XMLSchema#int",
-    "@value" : "12"
-  } ]
-}, {
-  "@id" : "https://w3id.org/fossr/data/test/Identifier_Q4",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
-  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "https://w3id.org/fossr/ontology/limesurvey/Identifier"
-  } ],
-  "https://w3id.org/fossr/ontology/limesurvey/id" : [ {
-    "@type" : "http://www.w3.org/2001/XMLSchema#int",
-    "@value" : "13"
-  } ]
-}, {
-  "@id" : "https://w3id.org/fossr/data/test/Identifier_QG1",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
-  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "https://w3id.org/fossr/ontology/limesurvey/Identifier"
-  } ],
-  "https://w3id.org/fossr/ontology/limesurvey/id" : [ {
-    "@type" : "http://www.w3.org/2001/XMLSchema#int",
-    "@value" : "1"
-  } ]
-}, {
-  "@id" : "https://w3id.org/fossr/data/test/Identifier_QG2",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
-  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "https://w3id.org/fossr/ontology/limesurvey/Identifier"
-  } ],
-  "https://w3id.org/fossr/ontology/limesurvey/id" : [ {
-    "@type" : "http://www.w3.org/2001/XMLSchema#int",
-    "@value" : "2"
-  } ]
-}, {
-  "@id" : "https://w3id.org/fossr/data/test/Identifier_QG3",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
-  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "https://w3id.org/fossr/ontology/limesurvey/Identifier"
-  } ],
-  "https://w3id.org/fossr/ontology/limesurvey/id" : [ {
-    "@type" : "http://www.w3.org/2001/XMLSchema#int",
-    "@value" : "3"
-  } ]
-}, {
-  "@id" : "https://w3id.org/fossr/data/test/Identifier_SV_ESS_Wave10",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
-  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "https://w3id.org/fossr/ontology/limesurvey/Identifier"
-  } ],
-  "https://w3id.org/fossr/ontology/limesurvey/id" : [ {
-    "@type" : "http://www.w3.org/2001/XMLSchema#int",
-    "@value" : "200"
-  } ]
-}, {
-  "@id" : "https://w3id.org/fossr/data/test/Identifier_SV_SODA_2023",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
-  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "https://w3id.org/fossr/ontology/limesurvey/Identifier"
-  } ],
-  "https://w3id.org/fossr/ontology/limesurvey/id" : [ {
-    "@type" : "http://www.w3.org/2001/XMLSchema#int",
-    "@value" : "100"
-  } ]
-}, {
-  "@id" : "https://w3id.org/fossr/data/test/Identifier_SV_SODA_2024",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
-  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "https://w3id.org/fossr/ontology/limesurvey/Identifier"
-  } ],
-  "https://w3id.org/fossr/ontology/limesurvey/id" : [ {
-    "@type" : "http://www.w3.org/2001/XMLSchema#int",
-    "@value" : "101"
-  } ]
-}, {
-  "@id" : "https://w3id.org/fossr/data/test/Identifier_Survey_ESS",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
-  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "https://w3id.org/fossr/ontology/limesurvey/Identifier"
-  } ],
-  "https://w3id.org/fossr/ontology/limesurvey/id" : [ {
-    "@type" : "http://www.w3.org/2001/XMLSchema#int",
-    "@value" : "2"
-  } ]
-}, {
-  "@id" : "https://w3id.org/fossr/data/test/Identifier_Survey_SODA",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
-  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "https://w3id.org/fossr/ontology/limesurvey/Identifier"
-  } ],
-  "https://w3id.org/fossr/ontology/limesurvey/id" : [ {
-    "@type" : "http://www.w3.org/2001/XMLSchema#int",
-    "@value" : "1"
-  } ]
-}, {
-  "@id" : "https://w3id.org/fossr/data/test/Name_QG_Archiving",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
-  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "https://w3id.org/fossr/ontology/limesurvey/Name"
-  } ],
-  "https://w3id.org/fossr/ontology/limesurvey/nameText" : [ {
-    "@value" : "Archiving Research Data"
-  } ]
-}, {
-  "@id" : "https://w3id.org/fossr/data/test/Name_QG_Demographics",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
-  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "https://w3id.org/fossr/ontology/limesurvey/Name"
-  } ],
-  "https://w3id.org/fossr/ontology/limesurvey/nameText" : [ {
-    "@value" : "General Information"
-  } ]
-}, {
-  "@id" : "https://w3id.org/fossr/data/test/Name_QG_Social",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
-  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "https://w3id.org/fossr/ontology/limesurvey/Name"
-  } ],
-  "https://w3id.org/fossr/ontology/limesurvey/nameText" : [ {
-    "@value" : "Social Background"
-  } ]
-}, {
-  "@id" : "https://w3id.org/fossr/data/test/Order_1",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
-  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "https://w3id.org/fossr/ontology/limesurvey/Order"
-  } ],
-  "https://w3id.org/fossr/ontology/limesurvey/order" : [ {
-    "@type" : "http://www.w3.org/2001/XMLSchema#int",
-    "@value" : "1"
-  } ]
-}, {
-  "@id" : "https://w3id.org/fossr/data/test/Order_2",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
-  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "https://w3id.org/fossr/ontology/limesurvey/Order"
-  } ],
-  "https://w3id.org/fossr/ontology/limesurvey/order" : [ {
-    "@type" : "http://www.w3.org/2001/XMLSchema#int",
-    "@value" : "2"
-  } ]
-}, {
-  "@id" : "https://w3id.org/fossr/data/test/Order_3",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
-  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "https://w3id.org/fossr/ontology/limesurvey/Order"
-  } ],
-  "https://w3id.org/fossr/ontology/limesurvey/order" : [ {
-    "@type" : "http://www.w3.org/2001/XMLSchema#int",
-    "@value" : "3"
-  } ]
-}, {
-  "@id" : "https://w3id.org/fossr/data/test/QuestionAttribute_Age",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
-  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "https://w3id.org/fossr/ontology/limesurvey/QuestionAttribute"
-  } ],
-  "https://w3id.org/fossr/ontology/limesurvey/attributeRandomGroup" : [ {
-    "@value" : "groupA"
-  } ],
-  "https://w3id.org/fossr/ontology/limesurvey/attributeTimeLimit" : [ {
-    "@type" : "http://www.w3.org/2001/XMLSchema#integer",
-    "@value" : "60"
-  } ],
-  "https://w3id.org/fossr/ontology/limesurvey/attributeTimeLimitAction" : [ {
-    "@type" : "http://www.w3.org/2001/XMLSchema#integer",
-    "@value" : "1"
-  } ]
-}, {
-  "@id" : "https://w3id.org/fossr/data/test/QuestionFlow_Archiving",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
-  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "https://w3id.org/fossr/ontology/limesurvey/QuestionFlow"
-  } ],
-  "https://w3id.org/fossr/ontology/limesurvey/hasFirstQuestionStep" : [ {
-    "@id" : "https://w3id.org/fossr/data/test/QuestionStep_QS3"
-  } ],
-  "https://w3id.org/fossr/ontology/limesurvey/hasLastQuestionStep" : [ {
-    "@id" : "https://w3id.org/fossr/data/test/QuestionStep_QS3"
-  } ],
-  "https://w3id.org/fossr/ontology/limesurvey/hasQuestionStep" : [ {
-    "@id" : "https://w3id.org/fossr/data/test/QuestionStep_QS3"
-  } ]
-}, {
-  "@id" : "https://w3id.org/fossr/data/test/QuestionFlow_Demographics",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
-  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "https://w3id.org/fossr/ontology/limesurvey/QuestionFlow"
-  } ],
-  "https://w3id.org/fossr/ontology/limesurvey/hasFirstQuestionStep" : [ {
-    "@id" : "https://w3id.org/fossr/data/test/QuestionStep_QS1"
-  } ],
-  "https://w3id.org/fossr/ontology/limesurvey/hasLastQuestionStep" : [ {
-    "@id" : "https://w3id.org/fossr/data/test/QuestionStep_QS2"
-  } ],
-  "https://w3id.org/fossr/ontology/limesurvey/hasQuestionStep" : [ {
-    "@id" : "https://w3id.org/fossr/data/test/QuestionStep_QS1"
-  }, {
-    "@id" : "https://w3id.org/fossr/data/test/QuestionStep_QS2"
-  } ]
-}, {
-  "@id" : "https://w3id.org/fossr/data/test/QuestionGroup_Archiving",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
-  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "https://w3id.org/fossr/ontology/limesurvey/QuestionGroup"
-  } ],
-  "https://w3id.org/fossr/ontology/limesurvey/hasComponentAttribute" : [ {
-    "@id" : "https://w3id.org/fossr/data/test/Attr_QG_Archiving_relevance"
-  } ],
-  "https://w3id.org/fossr/ontology/limesurvey/hasContent" : [ {
-    "@id" : "https://w3id.org/fossr/data/test/Content_QG_Archiving"
-  } ],
-  "https://w3id.org/fossr/ontology/limesurvey/hasId" : [ {
-    "@id" : "https://w3id.org/fossr/data/test/Identifier_QG2"
-  } ],
-  "https://w3id.org/fossr/ontology/limesurvey/hasName" : [ {
-    "@id" : "https://w3id.org/fossr/data/test/Name_QG_Archiving"
-  } ],
-  "https://w3id.org/fossr/ontology/limesurvey/hasQuestion" : [ {
-    "@id" : "https://w3id.org/fossr/data/test/Question_Archive"
-  } ],
-  "https://w3id.org/fossr/ontology/limesurvey/hasQuestionFlow" : [ {
-    "@id" : "https://w3id.org/fossr/data/test/QuestionFlow_Archiving"
-  } ]
-}, {
-  "@id" : "https://w3id.org/fossr/data/test/QuestionGroup_Demographics",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
-  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "https://w3id.org/fossr/ontology/limesurvey/QuestionGroup"
-  } ],
-  "https://w3id.org/fossr/ontology/limesurvey/hasComponentAttribute" : [ {
-    "@id" : "https://w3id.org/fossr/data/test/Attr_QG_Demographics_mandatory"
-  } ],
-  "https://w3id.org/fossr/ontology/limesurvey/hasContent" : [ {
-    "@id" : "https://w3id.org/fossr/data/test/Content_QG_Demographics"
-  } ],
-  "https://w3id.org/fossr/ontology/limesurvey/hasId" : [ {
-    "@id" : "https://w3id.org/fossr/data/test/Identifier_QG1"
-  } ],
-  "https://w3id.org/fossr/ontology/limesurvey/hasName" : [ {
-    "@id" : "https://w3id.org/fossr/data/test/Name_QG_Demographics"
-  } ],
-  "https://w3id.org/fossr/ontology/limesurvey/hasQuestion" : [ {
-    "@id" : "https://w3id.org/fossr/data/test/Question_Institution"
-  }, {
-    "@id" : "https://w3id.org/fossr/data/test/Question_Title"
-  } ],
-  "https://w3id.org/fossr/ontology/limesurvey/hasQuestionFlow" : [ {
-    "@id" : "https://w3id.org/fossr/data/test/QuestionFlow_Demographics"
-  } ]
-}, {
-  "@id" : "https://w3id.org/fossr/data/test/QuestionGroup_Social",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
-  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "https://w3id.org/fossr/ontology/limesurvey/QuestionGroup"
-  } ],
-  "https://w3id.org/fossr/ontology/limesurvey/hasContent" : [ {
-    "@id" : "https://w3id.org/fossr/data/test/Content_QG_Social"
-  } ],
-  "https://w3id.org/fossr/ontology/limesurvey/hasId" : [ {
-    "@id" : "https://w3id.org/fossr/data/test/Identifier_QG3"
-  } ],
-  "https://w3id.org/fossr/ontology/limesurvey/hasName" : [ {
-    "@id" : "https://w3id.org/fossr/data/test/Name_QG_Social"
-  } ],
-  "https://w3id.org/fossr/ontology/limesurvey/hasQuestion" : [ {
-    "@id" : "https://w3id.org/fossr/data/test/Question_Age"
-  } ]
-}, {
-  "@id" : "https://w3id.org/fossr/data/test/QuestionStep_QS1",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
-  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "https://w3id.org/fossr/ontology/limesurvey/QuestionStep"
-  } ],
-  "https://w3id.org/fossr/ontology/limesurvey/hasCondition" : [ {
-    "@id" : "https://w3id.org/fossr/data/test/Relevance_Always"
-  } ],
-  "https://w3id.org/fossr/ontology/limesurvey/hasNextQuestionStep" : [ {
-    "@id" : "https://w3id.org/fossr/data/test/QuestionStep_QS2"
-  } ],
-  "https://w3id.org/fossr/ontology/limesurvey/hasOrder" : [ {
-    "@id" : "https://w3id.org/fossr/data/test/Order_1"
-  } ]
-}, {
-  "@id" : "https://w3id.org/fossr/data/test/QuestionStep_QS2",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
-  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "https://w3id.org/fossr/ontology/limesurvey/QuestionStep"
-  } ],
-  "https://w3id.org/fossr/ontology/limesurvey/hasCondition" : [ {
-    "@id" : "https://w3id.org/fossr/data/test/Relevance_Always"
-  } ],
-  "https://w3id.org/fossr/ontology/limesurvey/hasOrder" : [ {
-    "@id" : "https://w3id.org/fossr/data/test/Order_2"
-  } ],
-  "https://w3id.org/fossr/ontology/limesurvey/hasPreviusQuestionStep" : [ {
-    "@id" : "https://w3id.org/fossr/data/test/QuestionStep_QS1"
-  } ]
-}, {
-  "@id" : "https://w3id.org/fossr/data/test/QuestionStep_QS3",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
-  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "https://w3id.org/fossr/ontology/limesurvey/QuestionStep"
-  } ],
-  "https://w3id.org/fossr/ontology/limesurvey/hasOrder" : [ {
-    "@id" : "https://w3id.org/fossr/data/test/Order_1"
-  } ]
-}, {
-  "@id" : "https://w3id.org/fossr/data/test/QuestionType_L",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
-  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "https://w3id.org/fossr/ontology/limesurvey/QuestionType"
-  } ],
-  "https://w3id.org/fossr/ontology/limesurvey/componentValue" : [ {
-    "@value" : "L"
-  } ]
-}, {
-  "@id" : "https://w3id.org/fossr/data/test/QuestionType_N",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
-  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "https://w3id.org/fossr/ontology/limesurvey/QuestionType"
-  } ],
-  "https://w3id.org/fossr/ontology/limesurvey/componentValue" : [ {
-    "@value" : "N"
-  } ]
-}, {
-  "@id" : "https://w3id.org/fossr/data/test/QuestionType_S",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
-  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "https://w3id.org/fossr/ontology/limesurvey/QuestionType"
-  } ],
-  "https://w3id.org/fossr/ontology/limesurvey/componentValue" : [ {
-    "@value" : "S"
-  } ]
-}, {
-  "@id" : "https://w3id.org/fossr/data/test/Question_Age",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
-  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "https://w3id.org/fossr/ontology/limesurvey/Question"
-  } ],
-  "https://w3id.org/fossr/ontology/limesurvey/hasAttribute" : [ {
-    "@id" : "https://w3id.org/fossr/data/test/QuestionAttribute_Age"
-  } ],
-  "https://w3id.org/fossr/ontology/limesurvey/hasContent" : [ {
-    "@id" : "https://w3id.org/fossr/data/test/Content_Q_Age"
-  } ],
-  "https://w3id.org/fossr/ontology/limesurvey/hasGroup" : [ {
-    "@id" : "https://w3id.org/fossr/data/test/QuestionGroup_Social"
-  } ],
-  "https://w3id.org/fossr/ontology/limesurvey/hasId" : [ {
-    "@id" : "https://w3id.org/fossr/data/test/Identifier_Q4"
-  } ],
-  "https://w3id.org/fossr/ontology/limesurvey/hasType" : [ {
-    "@id" : "https://w3id.org/fossr/data/test/QuestionType_N"
-  } ],
-  "https://w3id.org/fossr/ontology/limesurvey/hasVariable" : [ {
-    "@id" : "https://w3id.org/fossr/data/test/Variable_AGE"
-  } ],
-  "https://w3id.org/fossr/ontology/limesurvey/isEncrypted" : [ {
-    "@type" : "http://www.w3.org/2001/XMLSchema#integer",
-    "@value" : "0"
-  } ],
-  "https://w3id.org/fossr/ontology/limesurvey/isMandatory" : [ {
-    "@type" : "http://www.w3.org/2001/XMLSchema#integer",
-    "@value" : "1"
-  } ]
-}, {
-  "@id" : "https://w3id.org/fossr/data/test/Question_Archive",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
-  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "https://w3id.org/fossr/ontology/limesurvey/Question"
-  } ],
-  "https://w3id.org/fossr/ontology/limesurvey/hasAnswerOption" : [ {
-    "@id" : "https://w3id.org/fossr/data/test/AnswerOption_Always"
-  }, {
-    "@id" : "https://w3id.org/fossr/data/test/AnswerOption_Never"
-  }, {
-    "@id" : "https://w3id.org/fossr/data/test/AnswerOption_Sometimes"
-  } ],
-  "https://w3id.org/fossr/ontology/limesurvey/hasComponentAttribute" : [ {
-    "@id" : "https://w3id.org/fossr/data/test/Attr_Q_Archive_order"
-  } ],
-  "https://w3id.org/fossr/ontology/limesurvey/hasContent" : [ {
-    "@id" : "https://w3id.org/fossr/data/test/Content_Q_Archive"
-  } ],
-  "https://w3id.org/fossr/ontology/limesurvey/hasGroup" : [ {
-    "@id" : "https://w3id.org/fossr/data/test/QuestionGroup_Archiving"
-  } ],
-  "https://w3id.org/fossr/ontology/limesurvey/hasId" : [ {
-    "@id" : "https://w3id.org/fossr/data/test/Identifier_Q3"
-  } ],
-  "https://w3id.org/fossr/ontology/limesurvey/hasSubquestion" : [ {
-    "@id" : "https://w3id.org/fossr/data/test/Subquestion_Archive_Who"
-  } ],
-  "https://w3id.org/fossr/ontology/limesurvey/hasType" : [ {
-    "@id" : "https://w3id.org/fossr/data/test/QuestionType_L"
-  } ],
-  "https://w3id.org/fossr/ontology/limesurvey/hasVariable" : [ {
-    "@id" : "https://w3id.org/fossr/data/test/Variable_ARCHIVE"
-  } ],
-  "https://w3id.org/fossr/ontology/limesurvey/isEncrypted" : [ {
-    "@type" : "http://www.w3.org/2001/XMLSchema#integer",
-    "@value" : "0"
-  } ],
-  "https://w3id.org/fossr/ontology/limesurvey/isMandatory" : [ {
-    "@type" : "http://www.w3.org/2001/XMLSchema#integer",
-    "@value" : "1"
-  } ]
-}, {
-  "@id" : "https://w3id.org/fossr/data/test/Question_Institution",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
-  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "https://w3id.org/fossr/ontology/limesurvey/Question"
-  } ],
-  "https://w3id.org/fossr/ontology/limesurvey/hasComponentAttribute" : [ {
-    "@id" : "https://w3id.org/fossr/data/test/Attr_Q_Institution_order"
-  } ],
-  "https://w3id.org/fossr/ontology/limesurvey/hasContent" : [ {
-    "@id" : "https://w3id.org/fossr/data/test/Content_Q_Institution"
-  } ],
-  "https://w3id.org/fossr/ontology/limesurvey/hasDefaultValue" : [ {
-    "@id" : "https://w3id.org/fossr/data/test/DefaultValue_Institution"
-  } ],
-  "https://w3id.org/fossr/ontology/limesurvey/hasGroup" : [ {
-    "@id" : "https://w3id.org/fossr/data/test/QuestionGroup_Demographics"
-  } ],
-  "https://w3id.org/fossr/ontology/limesurvey/hasId" : [ {
-    "@id" : "https://w3id.org/fossr/data/test/Identifier_Q2"
-  } ],
-  "https://w3id.org/fossr/ontology/limesurvey/hasType" : [ {
-    "@id" : "https://w3id.org/fossr/data/test/QuestionType_S"
-  } ],
-  "https://w3id.org/fossr/ontology/limesurvey/hasVariable" : [ {
-    "@id" : "https://w3id.org/fossr/data/test/Variable_INSTITUTION"
-  } ],
-  "https://w3id.org/fossr/ontology/limesurvey/isEncrypted" : [ {
-    "@type" : "http://www.w3.org/2001/XMLSchema#integer",
-    "@value" : "0"
-  } ],
-  "https://w3id.org/fossr/ontology/limesurvey/isMandatory" : [ {
-    "@type" : "http://www.w3.org/2001/XMLSchema#integer",
-    "@value" : "0"
-  } ]
-}, {
-  "@id" : "https://w3id.org/fossr/data/test/Question_Title",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
-  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "https://w3id.org/fossr/ontology/limesurvey/Question"
-  } ],
-  "https://w3id.org/fossr/ontology/limesurvey/hasComponentAttribute" : [ {
-    "@id" : "https://w3id.org/fossr/data/test/Attr_Q_Title_order"
-  } ],
-  "https://w3id.org/fossr/ontology/limesurvey/hasContent" : [ {
-    "@id" : "https://w3id.org/fossr/data/test/Content_Q_Title"
-  } ],
-  "https://w3id.org/fossr/ontology/limesurvey/hasGroup" : [ {
-    "@id" : "https://w3id.org/fossr/data/test/QuestionGroup_Demographics"
-  } ],
-  "https://w3id.org/fossr/ontology/limesurvey/hasId" : [ {
-    "@id" : "https://w3id.org/fossr/data/test/Identifier_Q1"
-  } ],
-  "https://w3id.org/fossr/ontology/limesurvey/hasType" : [ {
-    "@id" : "https://w3id.org/fossr/data/test/QuestionType_S"
-  } ],
-  "https://w3id.org/fossr/ontology/limesurvey/hasVariable" : [ {
-    "@id" : "https://w3id.org/fossr/data/test/Variable_TITLE"
-  } ],
-  "https://w3id.org/fossr/ontology/limesurvey/isEncrypted" : [ {
-    "@type" : "http://www.w3.org/2001/XMLSchema#integer",
-    "@value" : "0"
-  } ],
-  "https://w3id.org/fossr/ontology/limesurvey/isMandatory" : [ {
-    "@type" : "http://www.w3.org/2001/XMLSchema#integer",
-    "@value" : "0"
-  } ]
-}, {
-  "@id" : "https://w3id.org/fossr/data/test/RecurrentTimePeriod_Annual",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
-  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "https://w3id.org/fossr/ontology/limesurvey/RecurrentTimePeriod"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "Annual"
-  } ]
-}, {
-  "@id" : "https://w3id.org/fossr/data/test/RecurrentTimePeriod_Biennial",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
-  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "https://w3id.org/fossr/ontology/limesurvey/RecurrentTimePeriod"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "Biennial"
-  } ]
-}, {
-  "@id" : "https://w3id.org/fossr/data/test/Relevance_Always",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
-  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "https://w3id.org/fossr/ontology/limesurvey/Relevance"
-  } ],
-  "https://w3id.org/fossr/ontology/limesurvey/relevance" : [ {
-    "@value" : "1"
-  } ]
-}, {
-  "@id" : "https://w3id.org/fossr/data/test/Relevance_IfArchives",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
-  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "https://w3id.org/fossr/ontology/limesurvey/Relevance"
-  } ],
-  "https://w3id.org/fossr/ontology/limesurvey/relevance" : [ {
-    "@value" : "ARCHIVE == 'Y'"
-  } ]
-}, {
-  "@id" : "https://w3id.org/fossr/data/test/Study_ESS",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
-  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "https://w3id.org/fossr/ontology/limesurvey/Study"
-  } ],
-  "https://w3id.org/fossr/ontology/limesurvey/hasInstrument" : [ {
-    "@id" : "https://w3id.org/fossr/data/test/Survey_ESS"
-  } ]
-}, {
-  "@id" : "https://w3id.org/fossr/data/test/Study_SODA",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
-  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "https://w3id.org/fossr/ontology/limesurvey/Study"
-  } ],
-  "https://w3id.org/fossr/ontology/limesurvey/hasInstrument" : [ {
-    "@id" : "https://w3id.org/fossr/data/test/Survey_SODA"
-  } ]
-}, {
-  "@id" : "https://w3id.org/fossr/data/test/Subquestion_Archive_Who",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
-  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "https://w3id.org/fossr/ontology/limesurvey/Subquestion"
-  } ],
-  "https://w3id.org/fossr/ontology/limesurvey/hasSubAttribute" : [ {
-    "@id" : "https://w3id.org/fossr/data/test/Attr_Subq_Who_label"
-  } ]
-}, {
-  "@id" : "https://w3id.org/fossr/data/test/SurveyVersion_ESS_Wave10",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
-  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "https://w3id.org/fossr/ontology/limesurvey/SurveyVersion"
-  } ],
-  "https://w3id.org/fossr/ontology/limesurvey/hasGroupFlow" : [ {
-    "@id" : "https://w3id.org/fossr/data/test/GroupFlow_ESS_Wave10"
-  } ],
-  "https://w3id.org/fossr/ontology/limesurvey/hasIntervalValidity" : [ {
-    "@id" : "https://w3id.org/fossr/data/test/TimeInterval_ESS_Wave10"
-  } ],
-  "https://w3id.org/fossr/ontology/limesurvey/hasSurveyId" : [ {
-    "@id" : "https://w3id.org/fossr/data/test/Identifier_SV_ESS_Wave10"
-  } ]
-}, {
-  "@id" : "https://w3id.org/fossr/data/test/SurveyVersion_SODA_2023",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
-  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "https://w3id.org/fossr/ontology/limesurvey/SurveyVersion"
-  } ],
-  "https://w3id.org/fossr/ontology/limesurvey/hasGroupFlow" : [ {
-    "@id" : "https://w3id.org/fossr/data/test/GroupFlow_SODA_2023"
-  } ],
-  "https://w3id.org/fossr/ontology/limesurvey/hasIntervalValidity" : [ {
-    "@id" : "https://w3id.org/fossr/data/test/TimeInterval_SODA_2023"
-  } ],
-  "https://w3id.org/fossr/ontology/limesurvey/hasSurveyId" : [ {
-    "@id" : "https://w3id.org/fossr/data/test/Identifier_SV_SODA_2023"
-  } ]
-}, {
-  "@id" : "https://w3id.org/fossr/data/test/SurveyVersion_SODA_2024",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
-  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "https://w3id.org/fossr/ontology/limesurvey/SurveyVersion"
-  } ],
-  "https://w3id.org/fossr/ontology/limesurvey/derivedFrom" : [ {
-    "@id" : "https://w3id.org/fossr/data/test/SurveyVersion_SODA_2023"
-  } ],
-  "https://w3id.org/fossr/ontology/limesurvey/hasGroupFlow" : [ {
-    "@id" : "https://w3id.org/fossr/data/test/GroupFlow_SODA_2024"
-  } ],
-  "https://w3id.org/fossr/ontology/limesurvey/hasIntervalValidity" : [ {
-    "@id" : "https://w3id.org/fossr/data/test/TimeInterval_SODA_2024"
-  } ],
-  "https://w3id.org/fossr/ontology/limesurvey/hasSurveyId" : [ {
-    "@id" : "https://w3id.org/fossr/data/test/Identifier_SV_SODA_2024"
-  } ]
-}, {
-  "@id" : "https://w3id.org/fossr/data/test/Survey_ESS",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
-  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "https://w3id.org/fossr/ontology/limesurvey/Survey"
-  } ],
-  "https://w3id.org/fossr/ontology/limesurvey/hasRecurrentTimePeriod" : [ {
-    "@id" : "https://w3id.org/fossr/data/test/RecurrentTimePeriod_Biennial"
-  } ],
-  "https://w3id.org/fossr/ontology/limesurvey/hasSurveyId" : [ {
-    "@id" : "https://w3id.org/fossr/data/test/Identifier_Survey_ESS"
-  } ],
-  "https://w3id.org/fossr/ontology/limesurvey/hasSurveyVersion" : [ {
-    "@id" : "https://w3id.org/fossr/data/test/SurveyVersion_ESS_Wave10"
-  } ]
-}, {
-  "@id" : "https://w3id.org/fossr/data/test/Survey_SODA",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
-  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "https://w3id.org/fossr/ontology/limesurvey/Survey"
-  } ],
-  "https://w3id.org/fossr/ontology/limesurvey/hasRecurrentTimePeriod" : [ {
-    "@id" : "https://w3id.org/fossr/data/test/RecurrentTimePeriod_Annual"
-  } ],
-  "https://w3id.org/fossr/ontology/limesurvey/hasSurveyId" : [ {
-    "@id" : "https://w3id.org/fossr/data/test/Identifier_Survey_SODA"
-  } ],
-  "https://w3id.org/fossr/ontology/limesurvey/hasSurveyVersion" : [ {
-    "@id" : "https://w3id.org/fossr/data/test/SurveyVersion_SODA_2023"
-  }, {
-    "@id" : "https://w3id.org/fossr/data/test/SurveyVersion_SODA_2024"
-  } ]
-}, {
-  "@id" : "https://w3id.org/fossr/data/test/TimeInterval_ESS_Wave10",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
-  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "https://w3id.org/fossr/ontology/limesurvey/TimeInterval"
-  } ],
-  "https://w3id.org/fossr/ontology/limesurvey/endTime" : [ {
-    "@type" : "http://www.w3.org/2001/XMLSchema#dateTime",
-    "@value" : "2022-06-30T23:59:59"
-  } ],
-  "https://w3id.org/fossr/ontology/limesurvey/startTime" : [ {
-    "@type" : "http://www.w3.org/2001/XMLSchema#dateTime",
-    "@value" : "2020-09-01T00:00:00"
-  } ]
-}, {
-  "@id" : "https://w3id.org/fossr/data/test/TimeInterval_SODA_2023",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
-  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "https://w3id.org/fossr/ontology/limesurvey/TimeInterval"
-  } ],
-  "https://w3id.org/fossr/ontology/limesurvey/endTime" : [ {
-    "@type" : "http://www.w3.org/2001/XMLSchema#dateTime",
-    "@value" : "2023-12-31T23:59:59"
-  } ],
-  "https://w3id.org/fossr/ontology/limesurvey/startTime" : [ {
-    "@type" : "http://www.w3.org/2001/XMLSchema#dateTime",
-    "@value" : "2023-01-01T00:00:00"
-  } ]
-}, {
-  "@id" : "https://w3id.org/fossr/data/test/TimeInterval_SODA_2024",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
-  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "https://w3id.org/fossr/ontology/limesurvey/TimeInterval"
-  } ],
-  "https://w3id.org/fossr/ontology/limesurvey/endTime" : [ {
-    "@type" : "http://www.w3.org/2001/XMLSchema#dateTime",
-    "@value" : "2024-12-31T23:59:59"
-  } ],
-  "https://w3id.org/fossr/ontology/limesurvey/startTime" : [ {
-    "@type" : "http://www.w3.org/2001/XMLSchema#dateTime",
-    "@value" : "2024-01-01T00:00:00"
-  } ]
-}, {
-  "@id" : "https://w3id.org/fossr/data/test/Variable_AGE",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
-  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "https://w3id.org/fossr/ontology/limesurvey/Variable"
-  } ],
-  "https://w3id.org/fossr/ontology/limesurvey/variableCod" : [ {
-    "@value" : "AGE"
-  } ]
-}, {
-  "@id" : "https://w3id.org/fossr/data/test/Variable_ARCHIVE",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
-  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "https://w3id.org/fossr/ontology/limesurvey/Variable"
-  } ],
-  "https://w3id.org/fossr/ontology/limesurvey/variableCod" : [ {
-    "@value" : "ARCHIVE"
-  } ]
-}, {
-  "@id" : "https://w3id.org/fossr/data/test/Variable_INSTITUTION",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
-  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "https://w3id.org/fossr/ontology/limesurvey/Variable"
-  } ],
-  "https://w3id.org/fossr/ontology/limesurvey/variableCod" : [ {
-    "@value" : "INSTITUTION"
-  } ]
-}, {
-  "@id" : "https://w3id.org/fossr/data/test/Variable_TITLE",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
-  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "https://w3id.org/fossr/ontology/limesurvey/Variable"
-  } ],
-  "https://w3id.org/fossr/ontology/limesurvey/variableCod" : [ {
-    "@value" : "TITLE"
-  } ]
-}, {
-  "@id" : "https://w3id.org/fossr/ontology/limesurvey/AnswerOption",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
-}, {
-  "@id" : "https://w3id.org/fossr/ontology/limesurvey/ComponentAttribute",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
-}, {
-  "@id" : "https://w3id.org/fossr/ontology/limesurvey/Content",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
-}, {
-  "@id" : "https://w3id.org/fossr/ontology/limesurvey/DefaultValue",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
-}, {
-  "@id" : "https://w3id.org/fossr/ontology/limesurvey/GroupFlow",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
-}, {
-  "@id" : "https://w3id.org/fossr/ontology/limesurvey/GroupFlowStep",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
-}, {
-  "@id" : "https://w3id.org/fossr/ontology/limesurvey/Identifier",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
-}, {
-  "@id" : "https://w3id.org/fossr/ontology/limesurvey/Name",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
-}, {
-  "@id" : "https://w3id.org/fossr/ontology/limesurvey/Order",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
-}, {
-  "@id" : "https://w3id.org/fossr/ontology/limesurvey/Question",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
-}, {
-  "@id" : "https://w3id.org/fossr/ontology/limesurvey/QuestionAttribute",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
-}, {
-  "@id" : "https://w3id.org/fossr/ontology/limesurvey/QuestionFlow",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
-}, {
-  "@id" : "https://w3id.org/fossr/ontology/limesurvey/QuestionGroup",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
-}, {
-  "@id" : "https://w3id.org/fossr/ontology/limesurvey/QuestionStep",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
-}, {
-  "@id" : "https://w3id.org/fossr/ontology/limesurvey/QuestionType",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
-}, {
-  "@id" : "https://w3id.org/fossr/ontology/limesurvey/RecurrentTimePeriod",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
-}, {
-  "@id" : "https://w3id.org/fossr/ontology/limesurvey/Relevance",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
-}, {
-  "@id" : "https://w3id.org/fossr/ontology/limesurvey/Study",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
-}, {
-  "@id" : "https://w3id.org/fossr/ontology/limesurvey/Subquestion",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
-}, {
-  "@id" : "https://w3id.org/fossr/ontology/limesurvey/Survey",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
-}, {
-  "@id" : "https://w3id.org/fossr/ontology/limesurvey/SurveyVersion",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
-}, {
-  "@id" : "https://w3id.org/fossr/ontology/limesurvey/TimeInterval",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
-}, {
-  "@id" : "https://w3id.org/fossr/ontology/limesurvey/Variable",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
-}, {
-  "@id" : "https://w3id.org/fossr/ontology/limesurvey/answerOrder",
-  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
-}, {
-  "@id" : "https://w3id.org/fossr/ontology/limesurvey/answerScaleId",
-  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
-}, {
-  "@id" : "https://w3id.org/fossr/ontology/limesurvey/answerText",
-  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
-}, {
-  "@id" : "https://w3id.org/fossr/ontology/limesurvey/assessmentValue",
-  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
-}, {
-  "@id" : "https://w3id.org/fossr/ontology/limesurvey/attributeRandomGroup",
-  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
-}, {
-  "@id" : "https://w3id.org/fossr/ontology/limesurvey/attributeTimeLimit",
-  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
-}, {
-  "@id" : "https://w3id.org/fossr/ontology/limesurvey/attributeTimeLimitAction",
-  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
-}, {
-  "@id" : "https://w3id.org/fossr/ontology/limesurvey/componentName",
-  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
-}, {
-  "@id" : "https://w3id.org/fossr/ontology/limesurvey/componentValue",
-  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
-}, {
-  "@id" : "https://w3id.org/fossr/ontology/limesurvey/defaultValueContent",
-  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
-}, {
-  "@id" : "https://w3id.org/fossr/ontology/limesurvey/derivedFrom",
-  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
-}, {
-  "@id" : "https://w3id.org/fossr/ontology/limesurvey/endTime",
-  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
-}, {
-  "@id" : "https://w3id.org/fossr/ontology/limesurvey/hasAnswerOption",
-  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
-}, {
-  "@id" : "https://w3id.org/fossr/ontology/limesurvey/hasAttribute",
-  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
-}, {
-  "@id" : "https://w3id.org/fossr/ontology/limesurvey/hasComponentAttribute",
-  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
-}, {
-  "@id" : "https://w3id.org/fossr/ontology/limesurvey/hasComponentFlowFirstStep",
-  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
-}, {
-  "@id" : "https://w3id.org/fossr/ontology/limesurvey/hasComponentFlowLastStep",
-  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
-}, {
-  "@id" : "https://w3id.org/fossr/ontology/limesurvey/hasComponentFlowNextStep",
-  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
-}, {
-  "@id" : "https://w3id.org/fossr/ontology/limesurvey/hasComponentFlowPreviusStep",
-  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
-}, {
-  "@id" : "https://w3id.org/fossr/ontology/limesurvey/hasComponentFlowStep",
-  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
-}, {
-  "@id" : "https://w3id.org/fossr/ontology/limesurvey/hasCondition",
-  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
-}, {
-  "@id" : "https://w3id.org/fossr/ontology/limesurvey/hasContent",
-  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
-}, {
-  "@id" : "https://w3id.org/fossr/ontology/limesurvey/hasDefaultValue",
-  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
-}, {
-  "@id" : "https://w3id.org/fossr/ontology/limesurvey/hasFirstQuestionStep",
-  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
-}, {
-  "@id" : "https://w3id.org/fossr/ontology/limesurvey/hasGroup",
-  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
-}, {
-  "@id" : "https://w3id.org/fossr/ontology/limesurvey/hasGroupFlow",
-  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
-}, {
-  "@id" : "https://w3id.org/fossr/ontology/limesurvey/hasId",
-  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
-}, {
-  "@id" : "https://w3id.org/fossr/ontology/limesurvey/hasInstrument",
-  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
-}, {
-  "@id" : "https://w3id.org/fossr/ontology/limesurvey/hasIntervalValidity",
-  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
-}, {
-  "@id" : "https://w3id.org/fossr/ontology/limesurvey/hasLastQuestionStep",
-  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
-}, {
-  "@id" : "https://w3id.org/fossr/ontology/limesurvey/hasName",
-  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
-}, {
-  "@id" : "https://w3id.org/fossr/ontology/limesurvey/hasNextQuestionStep",
-  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
-}, {
-  "@id" : "https://w3id.org/fossr/ontology/limesurvey/hasOrder",
-  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
-}, {
-  "@id" : "https://w3id.org/fossr/ontology/limesurvey/hasPreviusQuestionStep",
-  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
-}, {
-  "@id" : "https://w3id.org/fossr/ontology/limesurvey/hasQuestion",
-  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
-}, {
-  "@id" : "https://w3id.org/fossr/ontology/limesurvey/hasQuestionFlow",
-  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
-}, {
-  "@id" : "https://w3id.org/fossr/ontology/limesurvey/hasQuestionGroup",
-  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
-}, {
-  "@id" : "https://w3id.org/fossr/ontology/limesurvey/hasQuestionStep",
-  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
-}, {
-  "@id" : "https://w3id.org/fossr/ontology/limesurvey/hasRecurrentTimePeriod",
-  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
-}, {
-  "@id" : "https://w3id.org/fossr/ontology/limesurvey/hasSubAttribute",
-  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
-}, {
-  "@id" : "https://w3id.org/fossr/ontology/limesurvey/hasSubquestion",
-  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
-}, {
-  "@id" : "https://w3id.org/fossr/ontology/limesurvey/hasSurveyId",
-  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
-}, {
-  "@id" : "https://w3id.org/fossr/ontology/limesurvey/hasSurveyVersion",
-  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
-}, {
-  "@id" : "https://w3id.org/fossr/ontology/limesurvey/hasType",
-  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
-}, {
-  "@id" : "https://w3id.org/fossr/ontology/limesurvey/hasVariable",
-  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
-}, {
-  "@id" : "https://w3id.org/fossr/ontology/limesurvey/id",
-  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
-}, {
-  "@id" : "https://w3id.org/fossr/ontology/limesurvey/isEncrypted",
-  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
-}, {
-  "@id" : "https://w3id.org/fossr/ontology/limesurvey/isMandatory",
-  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
-}, {
-  "@id" : "https://w3id.org/fossr/ontology/limesurvey/nameText",
-  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
-}, {
-  "@id" : "https://w3id.org/fossr/ontology/limesurvey/order",
-  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
-}, {
-  "@id" : "https://w3id.org/fossr/ontology/limesurvey/randomize",
-  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
-}, {
-  "@id" : "https://w3id.org/fossr/ontology/limesurvey/relevance",
-  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
-}, {
-  "@id" : "https://w3id.org/fossr/ontology/limesurvey/startTime",
-  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
-}, {
-  "@id" : "https://w3id.org/fossr/ontology/limesurvey/text",
-  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
-}, {
-  "@id" : "https://w3id.org/fossr/ontology/limesurvey/variableCod",
-  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
-} ]
+###############################################################
+# SPARQL Queries for the LimeSurvey Ontology
+# Prefix: https://w3id.org/fossr/ontology/limesurvey/
+# Tested against: abox_test.ttl
+###############################################################
+
+@prefix : <https://w3id.org/fossr/ontology/limesurvey/> .
+
+###############################################################
+# SECTION 1 — Survey Structure
+###############################################################
+
+# CQ1 — What surveys are associated with a specific study?
+# Returns all Survey instances linked to a given Study via :hasInstrument.
+
+PREFIX : <https://w3id.org/fossr/ontology/limesurvey/>
+
+SELECT ?study ?survey
+WHERE {
+    ?study a :Study .
+    ?study :hasInstrument ?survey .
+}
+
+# To filter by a specific study, add:
+# FILTER(?study = <YOUR_STUDY_URI>)
+
+# ---------------------------------------------------------------
+
+# CQ2 — What are the different versions of a particular survey?
+# Returns all SurveyVersion instances linked to each Survey.
+
+PREFIX : <https://w3id.org/fossr/ontology/limesurvey/>
+
+SELECT ?survey ?version
+WHERE {
+    ?survey a :Survey .
+    ?survey :hasSurveyVersion ?version .
+}
+
+# ---------------------------------------------------------------
+
+# CQ3 — Which survey version was a particular version derived from?
+# Traverses the :derivedFrom chain (transitive) to show version history.
+
+PREFIX : <https://w3id.org/fossr/ontology/limesurvey/>
+
+SELECT ?version ?derivedFrom
+WHERE {
+    ?version a :SurveyVersion .
+    ?version :derivedFrom ?derivedFrom .
+}
+
+# For full transitive lineage (using :derivedFrom which is declared owl:TransitiveProperty):
+# SPARQL 1.1 property path:
+#
+# SELECT ?version ?ancestor
+# WHERE {
+#     ?version a :SurveyVersion .
+#     ?version :derivedFrom+ ?ancestor .
+# }
+
+# ---------------------------------------------------------------
+
+# CQ4 — What is the recurrent time period for longitudinal surveys?
+# Returns the :RecurrentTimePeriod associated with each Survey.
+
+PREFIX : <https://w3id.org/fossr/ontology/limesurvey/>
+
+SELECT ?survey ?period ?label
+WHERE {
+    ?survey a :Survey .
+    ?survey :hasRecurrentTimePeriod ?period .
+    OPTIONAL { ?period rdfs:label ?label . }
+}
+
+# ---------------------------------------------------------------
+
+# CQ5 — What are the start and end dates for each collection period?
+# Returns start and end times of each SurveyVersion's TimeInterval.
+
+PREFIX : <https://w3id.org/fossr/ontology/limesurvey/>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+SELECT ?version ?start ?end
+WHERE {
+    ?version a :SurveyVersion .
+    ?version :hasIntervalValidity ?interval .
+    ?interval :startTime ?start .
+    OPTIONAL { ?interval :endTime ?end . }
+}
+ORDER BY ?start
+
+###############################################################
+# SECTION 2 — Survey Components
+###############################################################
+
+# CQ6 — What components does a survey contain?
+# Returns all QuestionGroups reachable from a Survey through its GroupFlow.
+
+PREFIX : <https://w3id.org/fossr/ontology/limesurvey/>
+
+SELECT DISTINCT ?survey ?version ?group
+WHERE {
+    ?survey a :Survey .
+    ?survey :hasSurveyVersion ?version .
+    ?version :hasGroupFlow ?gf .
+    ?gf :hasComponentFlowStep ?step .
+    ?step :hasQuestionGroup ?group .
+}
+
+# ---------------------------------------------------------------
+
+# CQ7 — What is the order of components within a survey?
+# Returns each GroupFlowStep with its numeric order value.
+
+PREFIX : <https://w3id.org/fossr/ontology/limesurvey/>
+
+SELECT ?flow ?step ?group ?orderVal
+WHERE {
+    ?flow a :GroupFlow .
+    ?flow :hasComponentFlowStep ?step .
+    OPTIONAL { ?step :hasQuestionGroup ?group . }
+    OPTIONAL {
+        ?step :hasOrder ?ord .
+        ?ord :order ?orderVal .
+    }
+}
+ORDER BY ?flow ?orderVal
+
+# ---------------------------------------------------------------
+
+# CQ8 — What are the identifiers associated with each survey component?
+# Returns all components with their Identifier and numeric id value.
+
+PREFIX : <https://w3id.org/fossr/ontology/limesurvey/>
+
+SELECT ?component ?type ?id ?idVal
+WHERE {
+    ?component :hasId ?id .
+    ?id :id ?idVal .
+    OPTIONAL { ?component a ?type . }
+}
+ORDER BY ?type ?idVal
+
+# ---------------------------------------------------------------
+
+# CQ9 — What attributes does a specific component have?
+# Returns all ComponentAttribute instances linked to each component.
+
+PREFIX : <https://w3id.org/fossr/ontology/limesurvey/>
+
+SELECT ?component ?attr ?name ?value
+WHERE {
+    ?component :hasComponentAttribute ?attr .
+    ?attr :componentName ?name .
+    ?attr :componentValue ?value .
+}
+
+# ---------------------------------------------------------------
+
+# CQ10 — What is the name and value of a component attribute?
+# Returns all ComponentAttribute instances with their name/value pair.
+
+PREFIX : <https://w3id.org/fossr/ontology/limesurvey/>
+
+SELECT ?attr ?name ?value
+WHERE {
+    ?attr a :ComponentAttribute .
+    ?attr :componentName ?name .
+    ?attr :componentValue ?value .
+}
+ORDER BY ?name
+
+###############################################################
+# SECTION 3 — Questions, Question Groups and Answer Options
+###############################################################
+
+# CQ11 — What questions belong to a specific question group?
+# Returns all Question instances linked to each QuestionGroup.
+
+PREFIX : <https://w3id.org/fossr/ontology/limesurvey/>
+
+SELECT ?group ?groupName ?question ?questionText
+WHERE {
+    ?group a :QuestionGroup .
+    ?group :hasQuestion ?question .
+    OPTIONAL {
+        ?group :hasName ?n .
+        ?n :nameText ?groupName .
+    }
+    OPTIONAL {
+        ?question :hasContent ?c .
+        ?c :text ?questionText .
+    }
+}
+
+# ---------------------------------------------------------------
+
+# CQ12 — What is the condition (relevance) for displaying a question group or question?
+# Returns the relevance expression associated with each GroupFlowStep or QuestionStep.
+
+PREFIX : <https://w3id.org/fossr/ontology/limesurvey/>
+
+# For question groups (GroupFlowStep):
+SELECT ?step ?groupOrQuestion ?relevanceExpr
+WHERE {
+    {
+        ?step a :GroupFlowStep .
+        ?step :hasQuestionGroup ?groupOrQuestion .
+    } UNION {
+        ?step a :QuestionStep .
+    }
+    ?step :hasCondition ?rel .
+    ?rel :relevance ?relevanceExpr .
+}
+
+# ---------------------------------------------------------------
+
+# CQ13 — What answer options are available for a given question?
+# Returns all AnswerOption instances with text and order for each Question.
+
+PREFIX : <https://w3id.org/fossr/ontology/limesurvey/>
+
+SELECT ?question ?answerOption ?code ?text ?order
+WHERE {
+    ?question a :Question .
+    ?question :hasAnswerOption ?answerOption .
+    ?answerOption :componentValue ?code .
+    OPTIONAL { ?answerOption :answerText ?text . }
+    OPTIONAL { ?answerOption :answerOrder ?order . }
+}
+ORDER BY ?question ?order
+
+# ---------------------------------------------------------------
+
+# CQ14 — What answer options are available for a given question group?
+# Navigates from QuestionGroup → Question → AnswerOption.
+
+PREFIX : <https://w3id.org/fossr/ontology/limesurvey/>
+
+SELECT ?group ?question ?answerOption ?text ?order
+WHERE {
+    ?group a :QuestionGroup .
+    ?group :hasQuestion ?question .
+    ?question :hasAnswerOption ?answerOption .
+    OPTIONAL { ?answerOption :answerText ?text . }
+    OPTIONAL { ?answerOption :answerOrder ?order . }
+}
+ORDER BY ?group ?question ?order
+
+# ---------------------------------------------------------------
+
+# CQ15 — What is the default value for a specific question?
+# Returns the :DefaultValue content linked to each Question.
+
+PREFIX : <https://w3id.org/fossr/ontology/limesurvey/>
+
+SELECT ?question ?defaultContent
+WHERE {
+    ?question a :Question .
+    ?question :hasDefaultValue ?dv .
+    ?dv :defaultValueContent ?defaultContent .
+}
+
+# ---------------------------------------------------------------
+
+# CQ16 — What type does a question have?
+# Returns the QuestionType code associated with each Question.
+
+PREFIX : <https://w3id.org/fossr/ontology/limesurvey/>
+
+SELECT ?question ?questionType ?typeCode
+WHERE {
+    ?question a :Question .
+    ?question :hasType ?questionType .
+    ?questionType :componentValue ?typeCode .
+}
+
+# ---------------------------------------------------------------
+
+# CQ17 — What variable is associated with a question?
+# Returns the Variable and its code for each Question.
+
+PREFIX : <https://w3id.org/fossr/ontology/limesurvey/>
+
+SELECT ?question ?variable ?variableCode
+WHERE {
+    ?question a :Question .
+    ?question :hasVariable ?variable .
+    ?variable :variableCod ?variableCode .
+}
+
+# ---------------------------------------------------------------
+
+# CQ18 — Does a question have subquestions, and if so, what are they?
+# Returns all Subquestion instances linked to each Question.
+
+PREFIX : <https://w3id.org/fossr/ontology/limesurvey/>
+
+SELECT ?question ?subquestion
+WHERE {
+    ?question a :Question .
+    ?question :hasSubquestion ?subquestion .
+}
+
+# ---------------------------------------------------------------
+
+# CQ19 — What is the order of answer options for a question or question group?
+# Returns answer options ordered by :answerOrder.
+
+PREFIX : <https://w3id.org/fossr/ontology/limesurvey/>
+
+SELECT ?question ?answerOption ?code ?text ?orderVal
+WHERE {
+    ?question a :Question .
+    ?question :hasAnswerOption ?answerOption .
+    ?answerOption :componentValue ?code .
+    OPTIONAL { ?answerOption :answerText ?text . }
+    OPTIONAL { ?answerOption :answerOrder ?orderVal . }
+}
+ORDER BY ?question ?orderVal
+
+###############################################################
+# SECTION 4 — Variables and Data Collection
+###############################################################
+
+# CQ20 — What variable name is associated with each question?
+# Returns the variable code (:variableCod) for each Question.
+
+PREFIX : <https://w3id.org/fossr/ontology/limesurvey/>
+
+SELECT ?question ?questionText ?variableCode
+WHERE {
+    ?question a :Question .
+    ?question :hasVariable ?v .
+    ?v :variableCod ?variableCode .
+    OPTIONAL {
+        ?question :hasContent ?c .
+        ?c :text ?questionText .
+    }
+}
+
+# ---------------------------------------------------------------
+
+# CQ21 — What variables are collected in a survey?
+# Navigates the full chain Survey → SurveyVersion → GroupFlow →
+# GroupFlowStep → QuestionGroup → Question → Variable.
+
+PREFIX : <https://w3id.org/fossr/ontology/limesurvey/>
+
+SELECT DISTINCT ?survey ?variableCode
+WHERE {
+    ?survey a :Survey .
+    ?survey :hasSurveyVersion ?sv .
+    ?sv :hasGroupFlow ?gf .
+    ?gf :hasComponentFlowStep ?gfs .
+    ?gfs :hasQuestionGroup ?qg .
+    ?qg :hasQuestion ?q .
+    ?q :hasVariable ?v .
+    ?v :variableCod ?variableCode .
+}
+ORDER BY ?survey ?variableCode
