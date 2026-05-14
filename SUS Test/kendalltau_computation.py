@@ -4,12 +4,6 @@ import numpy as np
 import pandas as pd
 from scipy.stats import kendalltau
 
-# ---------------------------------------------------------
-# Example: dummy data
-# rows = items, columns = raters
-# Replace this with your real data (e.g. from CSV)
-# ---------------------------------------------------------
-
 survey_builder = np.array([
     [5, 1, 5, 2, 3, 1, 5, 1, 4, 1],
 [5, 1, 5, 2, 4, 1, 5, 1, 4, 2],
